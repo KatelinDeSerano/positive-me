@@ -5,10 +5,13 @@ export default function Nav() {
     return (
         <div className="nav">
             <ul>
-                <li><a href="">PositiveMe</a></li>
-                <li><a href="">Journal History</a></li>
-                <li className="logout" ><a href="#">Log Out</a></li>
+                
+                <li>PositiveMe</li>
+                <li>Journal History</li>
+                <li className="logout" >Log Out</li>
             </ul>
         </div>
     );
 };
+
+// TODO: add links to nav bar
