@@ -1,0 +1,12 @@
+.emoji {
+    height: 40px;
+    width: 40px;
+    margin: 0 5px;
+    border-radius: 50%;
+}
+
+.emoji:hover {
+    background-color: yellow;
+    height: 50px;
+    width: 50px;
+}

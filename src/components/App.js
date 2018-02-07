@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Textbox from './textbox.js';
 import Nav from './nav.js';
+import EmotionScale from './emotionScale.js';
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
       <div>
         <Nav />
         <Textbox label="Negative Thought"/>
+        <EmotionScale />
       </div>
     );
   }
