@@ -6,7 +6,7 @@ export default function Textbox(props) {
         <div className="textbox">
             <label>{props.label}</label>
             <div>
-                <textarea rows="4" required=""></textarea>
+                <textarea rows="3" required=""></textarea>
             </div>
         </div>
     );

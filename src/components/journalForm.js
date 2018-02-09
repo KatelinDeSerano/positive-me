@@ -8,6 +8,7 @@ class JournalForm extends Component {
   render() {
     return (
       <div className="journalForm">
+        <h1>Journal Form</h1>
         <Textbox label="Negative Thought"/>
         <EmotionScale />
         <Textbox label="Evidence Against Negative Thought"/>
