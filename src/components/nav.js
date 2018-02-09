@@ -8,7 +8,7 @@ export default function Nav() {
                 
                 <li>PositiveMe</li>
                 <li>Journal History</li>
-                <li className="logout" >Log Out</li>
+                <li className="logout"> Log Out</li>
             </ul>
         </div>
     );

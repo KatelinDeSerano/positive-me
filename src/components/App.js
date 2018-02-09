@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 
 import './App.css';
-import Textbox from './textbox.js';
+
 import Nav from './nav.js';
-import EmotionScale from './emotionScale.js';
+import JournalForm from './journalForm.js';
+
 
 class App extends Component {
   render() {
     return (
       <div>
         <Nav />
-        <Textbox label="Negative Thought"/>
-        <EmotionScale />
+        <JournalForm />
       </div>
     );
   }
