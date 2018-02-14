@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
-
+// import {Link} from 'react-router-dom';
 import './landingPage.css';
 
-import LoginForm from './loginForm.js';
+import RegistrationForm from './registrationForm.js';
 
 
 
 class LandingPage extends Component {
   render() {
     return (
-      <div>
-        <h1>Welcome to Postive Me</h1>
-        <p>Lorum Ipsum Blah blah blah</p>
-        <LoginForm />
-        <Link to="/register">Register </Link>
+      <div className="landingPage">
+        <h1>Some TExt Here</h1>
+        <RegistrationForm />
       </div>
     );
   }
