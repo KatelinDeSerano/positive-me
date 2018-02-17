@@ -1,0 +1,19 @@
+.registrationForm {
+    padding: 5rem;
+    text-align: center;
+    border: 1px solid lavenderblush;
+    background-color: lavenderblush;
+}
+
+.hero {
+    border: 1px solid gainsboro;
+    background-color: gainsboro;
+    text-align: center;
+    padding: 5rem;
+}
+
+.howItWorks {
+    border: 1px solid aliceblue;
+    background-color: aliceblue;
+    padding: 5rem;
+}

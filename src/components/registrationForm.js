@@ -1,11 +1,12 @@
 import React from 'react';
 import {Field, reduxForm, focus} from 'redux-form';
+import './registrationForm.css';
 // import {registerUser} from '../actions/users';
 // import {login} from '../actions/auth';
-// import Input from './input';
-// import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
-// const passwordLength = length({min: 10, max: 72});
-// const matchesPassword = matches('password');
+import Input from './input';
+import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
+const passwordLength = length({min: 10, max: 72});
+const matchesPassword = matches('password');
 
 export class RegistrationForm extends React.Component {
     // onSubmit(values) {
@@ -18,6 +19,7 @@ export class RegistrationForm extends React.Component {
 
     render() {
         return (
+            <div className="loginForm">
             <form
                 className="login-form"
                 onSubmit={this.props.handleSubmit(values =>
@@ -50,10 +52,12 @@ export class RegistrationForm extends React.Component {
                 />
                 <button
                     type="submit"
-                    disabled={this.props.pristine || this.props.submitting}>
+                    disabled={this.props.pristine || this.props.submitting}
+                    >
                     Register
                 </button>
             </form>
+            </div>
         );
     }
 }
