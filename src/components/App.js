@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './App.css';
 import Chart from './chart.js';
-
+import JournalForm from './journalForm.js';
 import LandingPage from './landingPage.js';
 
 class App extends Component {
@@ -11,6 +11,7 @@ class App extends Component {
       <div>
         <LandingPage />
         <Chart />
+        <JournalForm />
       </div>
     );
   }
