@@ -1,0 +1,15 @@
+.minJournalView {
+    border: 1px solid black;
+    padding: 15px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+h3 {
+    display: inline-block;
+}
+
+i {
+    margin: 5px;
+}

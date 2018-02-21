@@ -3,14 +3,27 @@
     width: 40px;
     margin: 0 5px;
     border-radius: 50%;
+    transition: all .2s ease-in-out;
 }
 
 .emoji:hover {
     background-color: yellow;
-    height: 50px;
-    width: 50px;
+    transform: scale(1.1);
+}
+
+.selected {
+    background-color: yellow;
+}
+
+.empty {
+    background-color: white;
 }
 
 .emotionScale {
-    margin: 10px 0;
+    margin: 15px;
+}
+
+.emojiSelect {
+    padding: 5px 0;
+    margin: 10px;
 }

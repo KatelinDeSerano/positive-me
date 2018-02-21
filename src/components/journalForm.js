@@ -11,7 +11,7 @@ class JournalForm extends Component {
   }
   render() {
     return (
-      <div className="journalForm">
+      <div className="form">
         <form
           className="journalForm"
           onSubmit={this.props.handleSubmit(values =>
