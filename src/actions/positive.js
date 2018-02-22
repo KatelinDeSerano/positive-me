@@ -1,7 +1,7 @@
-export const FETCH_DATA = "FETCH_DATA";
-export const fetch_data = (data) => {
+export const SET_EMOJI_VALUE = "SET_EMOJI_VALUE";
+export const setEmojiValue = (value) => {
   return {
-    type: FETCH_DATA,
-    data
+    type: SET_EMOJI_VALUE,
+    value
   }
 }

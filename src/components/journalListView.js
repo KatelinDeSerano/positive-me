@@ -1,9 +1,9 @@
 import React from "react";
-import './minJournalView.css';
+import './journalListView.css';
 
-export default function MinJournalView(props) {
+export default function JournalListView(props) {
     return (
-        <div className="minJournalView">
+        <div className="journalListView">
             <span className="display">
             <i className="fas fa-plus"></i>
             <h3>MM.DD.YYYY</h3>

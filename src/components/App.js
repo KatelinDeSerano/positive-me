@@ -4,7 +4,8 @@ import './App.css';
 import Chart from './chart.js';
 import JournalForm from './journalForm.js';
 import LandingPage from './landingPage.js';
-import MinJournalView from './minJournalView.js';
+import JournalListView from './journalListView.js';
+import JournalDetail from './journalDetail.js';
 
 class App extends Component {
   render() {
@@ -13,7 +14,8 @@ class App extends Component {
         <LandingPage />
         <Chart />
         <JournalForm />
-        <MinJournalView />
+        <JournalListView />
+        <JournalDetail />
       </div>
     );
   }
