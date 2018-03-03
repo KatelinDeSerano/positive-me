@@ -3,9 +3,8 @@ import './nav.css';
 
 export default function Nav() {
     return (
-        <div className="nav">
-            <ul>
-                
+        <div>
+            <ul className="nav">
                 <li>PositiveMe</li>
                 <li>Journal History</li>
                 <li className="logout"> Log Out</li>

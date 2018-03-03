@@ -1,0 +1,54 @@
+.journalContent p {
+    font-size: 18px;
+}
+
+.journalContent h3 {
+    text-align: center;
+    display: block;
+    margin: 0;
+    padding: 10px;
+}
+
+.fa-plus {
+    margin: 5px;
+    float: left;
+    transition: all .2s ease-in-out;
+}
+
+.fa-trash-alt {
+    margin: 5px;
+    float: right;
+    transition: all .2s ease-in-out;
+}
+
+.fa-edit {
+    margin: 5px;
+    float: right;
+    transition: all .2s ease-in-out;
+}
+
+#icon:hover {
+    transform: scale(1.1);
+}
+
+.journalDetailMenu {
+    width: 85%;
+    height: 2rem;
+    margin: auto;
+    border: 1px solid black;
+    background-color: turquoise;
+}
+
+.journalContent {
+    width: 85%;
+    margin: auto;
+    border: 1px solid black;
+    border-top: none;
+}
+
+li {
+    list-style: none;
+    font-weight: bold;
+    margin: 10px;
+    
+}
