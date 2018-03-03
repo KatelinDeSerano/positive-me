@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-
-
-// import {Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link, Redirect} from 'react-router-dom';
 import './landingPage.css';
+import {connect}  from 'react-redux';
+
 
 import RegistrationForm from './registrationForm.js';
 
 class LandingPage extends Component {
   render() {
+    if (this.props.currentUser) {
+      return <Redirect to={`/positive-me/{this.props.currentUser.username}`} />
+    }
     return (
       <div className="landingPage">
         <div className="hero">
@@ -42,5 +45,8 @@ class LandingPage extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  currentUser: state.auth.currentUser
+})
 
-export default LandingPage;
+export default connect(mapStateToProps)(LandingPage);
