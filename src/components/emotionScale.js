@@ -11,14 +11,13 @@ import neutral from '../images/260102-emoji/svg/confused.svg';
 import happy from '../images/260102-emoji/svg/happy-2.svg';
 
 export class EmotionScale extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     emojiClick(value) {
         this.props.dispatch(setEmojiValue(value));
         console.log(this.props.value);
     }
+
+    
 
     render() {
         return (

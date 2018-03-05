@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import {Field, reduxForm, focus} from 'redux-form';
-import './journalForm.css';
-import Textbox from './textbox.js';
+import {Field, reduxForm} from 'redux-form';
 import EmotionScale from './emotionScale.js';
+import './journalForm.css';
 import Input from './input.js';
 
 class JournalForm extends Component {
