@@ -6,12 +6,10 @@ export default function Nav() {
     return (
         <div>
             <ul className="nav">
-                <li><Link to="/:username">PositiveMe</ Link></li>
-                <li><Link to="/:username/journal_history">Journal History</ Link></li>
+                <li><Link to="/dashboard">PositiveMe</ Link></li>
+                <li><Link to="/journal_history">Journal History</ Link></li>
                 <li className="logout"> Log Out</li>
             </ul>
         </div>
     );
 };
-
-// TODO: add links to nav bar

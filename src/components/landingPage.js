@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import {Redirect} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import './landingPage.css';
 import {connect}  from 'react-redux';
 
 
-import RegistrationForm from './registrationForm.js';
+import LoginPage from './loginPage.js';
 
 class LandingPage extends Component {
   render() {
-    if (this.props.currentUser) {
-      return <Redirect to={`/positive-me/{this.props.currentUser.username}`} />
-    }
     return (
       <div className="landingPage">
         <div className="hero">
@@ -34,11 +31,10 @@ class LandingPage extends Component {
                   prompts you to challenge the negative thoughts you had that day.</li>
                 <li>View your progress and watch your mood grow with your positive thoughts.</li>
               </ul>
-              
             </div>
-            <div className="registrationForm">
-            <h3>Register Today.</h3>
-        <RegistrationForm />
+            <div className="registrationPage">
+            <Link to="/login">Login </ Link>
+            <Link to="/register">Register</ Link>
         </div>
       </div>
     );
@@ -46,7 +42,7 @@ class LandingPage extends Component {
 }
 
 const mapStateToProps = state => ({
-  currentUser: state.auth.currentUser
-})
+  loggedIn: state.auth.currentUser !== null
+});
 
 export default connect(mapStateToProps)(LandingPage);

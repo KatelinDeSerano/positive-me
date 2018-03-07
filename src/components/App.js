@@ -5,7 +5,8 @@ import LandingPage from './landingPage.js';
 import JournalHistory from './journalHistory.js';
 import Nav from './nav.js';
 import Dashboard from './dashboard.js';
-import LoginForm from './loginForm.js';
+import RegistrationPage from './registrationPage.js';
+import LoginPage from './loginPage.js';
 
 class App extends Component {
   render() {
@@ -13,10 +14,11 @@ class App extends Component {
       <Router>
         <div>
           <Nav />
-          <LoginForm />
           <Route exact path='/' component={LandingPage} />
-          <Route exact path='/:username' component={Dashboard} />
-          <Route exact path='/:username/journal_history' component={JournalHistory} />
+          <Route exact path='/dashboard' component={Dashboard} />
+          <Route exact path='/login' component={LoginPage} />
+          <Route exact path='/register' component={RegistrationPage} />
+          <Route exact path='/journal_history' component={JournalHistory} />
         </div>
       </Router>
     );
