@@ -1,7 +1,6 @@
 import React from "react";
 import './chart.css';
 import {connect} from "react-redux";
-var LineChart = require('react-chartjs-2').Line;
 var BarChart = require('react-chartjs-2').Bar;
 
 export class Chart extends React.Component {
@@ -16,6 +15,8 @@ export class Chart extends React.Component {
             return entry.positiveFeeling; 
         });
         var chartData = {
+            
+
             labels: labels,
             datasets: [
                 {
@@ -30,23 +31,30 @@ export class Chart extends React.Component {
                 },
                 {
                     label: "My Positive Feelings",
-                    fillColor: "rgba(151,187,205,0.2)",
-                    strokeColor: "rgba(151,187,205,1)",
-                    pointColor: "rgba(151,187,205,1)",
-                    pointStrokeColor: "#fff",
-                    pointHighlightFill: "#fff",
-                    pointHighlightStroke: "rgba(151,187,205,1)",
+                    backgroundColor: 'rgba(255,99,132,0.2)',
+                    borderColor: 'rgba(255,99,132,1)',
+                    borderWidth: 1,
+                    hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+                    hoverBorderColor: 'rgba(255,99,132,1)',
                     data: positive
                 }
             ]
         };
         const chartOptions = {
-
-            ///Boolean - Whether grid lines are shown across the chart
-            scaleShowGridLines : false,
+            scales: {
+                xAxes: [{
+                    stacked: true
+                }],
+                yAxes: [{
+                    stacked: true
+                }]
+            },
+            
+            // ///Boolean - Whether grid lines are shown across the chart
+            // scaleShowGridLines : false,
         
-            //String - Colour of the grid lines
-            scaleGridLineColor : "rgba(0,0,0,.05)",
+            // //String - Colour of the grid lines
+            // scaleGridLineColor : "rgba(0,0,0,.05)",
         
             //Number - Width of the grid lines
             scaleGridLineWidth : 1,
@@ -89,7 +97,9 @@ export class Chart extends React.Component {
         
             //Boolean - Whether to horizontally center the label and point dot inside the grid
             offsetGridLines : false
+            
         };
+
         
         return (
             <div className="chart">
