@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Field, reduxForm} from 'redux-form';
-import EmotionScale from './emotionScale.js';
+import EmojiScale1 from './emojiScale1.js';
+import EmojiScale2 from './emojiScale2.js';
 import './journalForm.css';
 import Input from './input.js';
 
@@ -18,12 +19,12 @@ class JournalForm extends Component {
           <h1>Journal Form</h1>
           <label htmlFor="negativeThought">Negative Thought</label>
           <Field component={Input} type="text" name="negativeThought" />
-          <EmotionScale />
+          <EmojiScale1 />
           <label htmlFor="evidenceAgainstThought">Evidence Against Negative Thought</label>
           <Field component={Input} type="text" name="evidenceAgainstThought" />
           <label htmlFor="positiveThought">New, Positive Thought</label>
           <Field component={Input} type="text" name="positiveThought" />
-          <EmotionScale />
+          <EmojiScale2 />
           <button
             type="submit"
             disabled={this.props.pristine || this.props.submitting}

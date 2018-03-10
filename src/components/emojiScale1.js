@@ -1,7 +1,7 @@
 import React from "react";
-import './emotionScale.css';
+import './emojiScale.css';
 import {connect} from "react-redux";
-import {setEmojiValue} from "../actions/positive.js";
+import {setEmojiValue1} from "../actions/positive.js";
 
 
 import coolFace from '../images/260102-emoji/svg/cool-1.svg';
@@ -10,18 +10,15 @@ import sad from '../images/260102-emoji/svg/sad-2.svg';
 import neutral from '../images/260102-emoji/svg/confused.svg';
 import happy from '../images/260102-emoji/svg/happy-2.svg';
 
-export class EmotionScale extends React.Component {
+export class EmojiScale1 extends React.Component {
 
     emojiClick(value) {
-        this.props.dispatch(setEmojiValue(value));
+        this.props.dispatch(setEmojiValue1(value));
         console.log(this.props.value);
     }
-
-    
-
     render() {
         return (
-            <div className="emotionScale">
+            <div className="emojiScale1">
                 <label>How do you feel?</label>
                 <div className="emojiSelect">
                     <img src={crying} className={"emoji " + (this.props.value===1 ? "selected" : "empty") } 
@@ -41,7 +38,7 @@ export class EmotionScale extends React.Component {
 };
 
 const mapStateToProps = state => ({
-    value: state.positiveReducer.emojiValue
+    value: state.positiveReducer.emojiValue1
 })
 
-export default connect(mapStateToProps)(EmotionScale);
+export default connect(mapStateToProps)(EmojiScale1);
