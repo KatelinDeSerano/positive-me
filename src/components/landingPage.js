@@ -33,8 +33,10 @@ class LandingPage extends Component {
               </ul>
             </div>
             <div className="registrationPage">
-            <Link to="/login">Login </ Link>
-            <Link to="/register">Register</ Link>
+            <span>
+            <Link to="/login" className="auth">Login </ Link>
+            <Link to="/register" className="auth">Register</ Link>
+            </span>
         </div>
       </div>
     );

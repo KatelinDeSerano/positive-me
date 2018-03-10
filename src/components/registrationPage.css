@@ -1,7 +1,9 @@
-h2 {
+.home h2 {
     text-align: center;
 }
 
 .auth {
+    display: block;
     text-align: center;
+    
 }

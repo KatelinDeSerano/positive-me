@@ -13,7 +13,7 @@ export function LoginPage(props) {
         <div className="home">
             <h2>Login</h2>
             <LoginForm />
-            <Link to="/register">Register</Link>
+            <Link to="/register" className="auth">Register</Link>
         </div>
     );
 }
