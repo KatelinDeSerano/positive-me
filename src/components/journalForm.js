@@ -4,10 +4,16 @@ import EmojiScale1 from './emojiScale1.js';
 import EmojiScale2 from './emojiScale2.js';
 import './journalForm.css';
 import Input from './input.js';
+import {postJournalEntry} from '../actions/positive.js';
+import {connect} from 'react-redux';
 
 class JournalForm extends Component {
   onSubmit(values){
-
+    values.emojiValue1 = this.props.emojiValue1;
+    values.emojiValue2 = this.props.emojiValue2;
+    values.user = this.props.user;
+    console.log(values);
+    this.props.dispatch(postJournalEntry(values))
   }
   render() {
     return (
@@ -37,4 +43,12 @@ class JournalForm extends Component {
   }
 }
 
-export default reduxForm({form: "journal"})(JournalForm);
+const mapStateToProps = state => ({
+  emojiValue1: state.positiveReducer.emojiValue1,
+  emojiValue2: state.positiveReducer.emojiValue2,
+  user: state.auth.currentUser.username
+})
+
+JournalForm = reduxForm({form: "journal"})(JournalForm);
+JournalForm = connect(mapStateToProps)(JournalForm);
+export default JournalForm;

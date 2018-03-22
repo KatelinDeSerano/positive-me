@@ -1,6 +1,6 @@
 import React from "react";
 import './nav.css';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import { clearAuth } from "../actions/auth";
 import {connect} from "react-redux";
 
@@ -9,6 +9,9 @@ export class Nav extends React.Component {
         this.props.dispatch(clearAuth());
     }
     render() {
+        if (!this.props.loggedIn) {
+           return <Redirect to="/" />
+        }
       return (
         <div>
             <ul className="nav">
@@ -21,4 +24,8 @@ export class Nav extends React.Component {
     }
 };
 
-export default connect()(Nav);
+const mapStateToProps = state => ({
+    loggedIn: state.auth.currentUser !== null
+})
+
+export default connect(mapStateToProps)(Nav);
