@@ -9,6 +9,7 @@ import {connect} from 'react-redux';
 
 class JournalForm extends Component {
   onSubmit(values){
+    values.date = Date.now();
     values.emojiValue1 = this.props.emojiValue1;
     values.emojiValue2 = this.props.emojiValue2;
     values.user = this.props.user;

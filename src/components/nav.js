@@ -17,7 +17,7 @@ export class Nav extends React.Component {
             <ul className="nav">
                 <li><Link to="/dashboard">PositiveMe</ Link></li>
                 <li><Link to="/journal_history">Journal History</ Link></li>
-                <li className="logout" onClick={() => this.logout()}> Log Out</li>
+                <li className="logout" onClick={() => this.logout()}>Log Out</li>
             </ul>
         </div>
       );

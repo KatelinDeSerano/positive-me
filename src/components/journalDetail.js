@@ -42,7 +42,7 @@ export default class AddressBook extends React.Component {
         return (
             <div className="journalDetail">
                 <div className="journalDetailMenu">
-                    <i className="fas fa-plus" id="icon"></i>
+                    <i className="fas fa-minus" id="icon"></i>
                     <i className="fas fa-trash-alt" id="icon"></i>
                     <i className="far fa-edit" id="icon"></i>
                 </div> 

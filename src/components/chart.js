@@ -3,17 +3,21 @@ import './chart.css';
 import {connect} from "react-redux";
 var BarChart = require('react-chartjs-2').Bar;
 
+// consider changing "emojiValue" variables to more descriptive names
+
 export class Chart extends React.Component {
     render() {
         let labels = this.props.journal.map(entry => {
             return entry.date; 
         });
         let negative = this.props.journal.map(entry => {
-            return entry.negativeFeeling; 
+            return -entry.emojiValue1; 
         });
         let positive = this.props.journal.map(entry => {
-            return entry.positiveFeeling; 
+            return entry.emojiValue2; 
         });
+        console.log(negative);
+        console.log(positive);
         var chartData = {
             
 
@@ -21,21 +25,20 @@ export class Chart extends React.Component {
             datasets: [
                 {
                     label: "My Negative Feelings",
-                    fillColor: "rgba(220,220,220,0.2)",
-                    strokeColor: "rgba(220,220,220,1)",
-                    pointColor: "rgba(220,220,220,1)",
-                    pointStrokeColor: "#fff",
-                    pointHighlightFill: "#fff",
-                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    backgroundColor: "#42f4eb",
+                    borderColorr: "#42f4eb",
+                    borderWidth: 1,
+                    hoverBackgroundColor: "#42f4eb",
+                    hoverBorderColor: "#42f4eb",
                     data: negative
                 },
                 {
                     label: "My Positive Feelings",
-                    backgroundColor: 'rgba(255,99,132,0.2)',
-                    borderColor: 'rgba(255,99,132,1)',
+                    backgroundColor: '#f4df41',
+                    borderColor: '#f4df41',
                     borderWidth: 1,
-                    hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-                    hoverBorderColor: 'rgba(255,99,132,1)',
+                    hoverBackgroundColor: '#f4df41',
+                    hoverBorderColor: '#f4df41',
                     data: positive
                 }
             ]

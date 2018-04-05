@@ -1,4 +1,6 @@
 .chart {
-    height: 400px;
-    width: 400px;
+    height: 100px;
+    width: 600px;
+    float: right;
+    padding: 75px;
 }

@@ -9,18 +9,16 @@
 
 .nav li {
     display: inline;
-}
-
-.nav li a {
-    color: white;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    margin: 10;
 }
 
-/* Change the link color to #111 (black) on hover */
-.nav li a:hover {
-    background-color: #111;
+.nav li a{
+    margin: 10;
+    color: white;
+    text-decoration: none;
+    padding-right: 15px;
+    
 }
 
 .logout {
