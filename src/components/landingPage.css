@@ -1,3 +1,5 @@
+
+
 .registrationForm {
     padding: 5rem;
     text-align: center;
@@ -6,14 +8,52 @@
 }
 
 .hero {
-    border: 1px solid gainsboro;
-    background-color: gainsboro;
+    background: url(../images/thumbs_up.jpeg) no-repeat center fixed;
+    background-color:rgba(64, 200, 224, 0.652);
+    background-blend-mode: multiply;
+    background-size: cover; 
+    color: white;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* TODO: Fix paragraph to look nice */
+.hero h1 {
+    margin: 0;
     text-align: center;
-    padding: 5rem;
+    font-size: 5rem;
+    padding: 2rem;
+}
+
+.hero p {
+    margin: auto;
+    width: 70%;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
 }
 
 .howItWorks {
     border: 1px solid aliceblue;
     background-color: aliceblue;
-    padding: 5rem;
+    padding: auto;
+    text-align: center;
+}
+.howItWorks h2 {
+    font-size: 2rem;
+    text-decoration: underline;
+}
+.howItWorks li {
+    font-size: 1.25rem;
+    padding: 1rem;
+}
+
+.howItWorks i {
+    font-size: 30px;
+}
+
+.howItWorks ul {
+    padding: 0;
+    width: 50%;
+    margin: auto;
 }

@@ -81,3 +81,30 @@ export const fetchJournal = (user) => (dispatch, getState) => {
     .then(data => dispatch(fetchJournalSuccess(data)))
     .catch(err => dispatch(fetchJournalError(err)))
 };
+
+export const deleteEntry = (id, user) => (dispatch, getState) => {
+  console.log('action triggered. Entry index:' + id);
+  const authToken = getState().auth.authToken;
+  return fetch(`${API_BASE_URL}/positive-me/${id}`, {
+      method: 'DELETE',
+      headers: {
+          // Provide our auth token as credentials
+          Authorization: `Bearer ${authToken}`
+      }
+  })
+  .then(res => dispatch(deleteEntry(id, user)))
+};
+
+export const DELETE_JOURNAL_SUCCESS = "DELETE_JOURNAL_SUCCESS";
+export const deleteJournalSuccess = (id, user) => {
+  return {
+  }
+}
+
+export const DELETE_JOURNAL_ERROR = "DELETE_JOURNAL_ERROR";
+export const deleteJournalError = (error) => {
+  return {
+    type: DELETE_JOURNAL_ERROR, 
+    error
+  }
+}

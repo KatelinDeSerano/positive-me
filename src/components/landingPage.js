@@ -26,9 +26,12 @@ class LandingPage extends Component {
             <div className="howItWorks">
             <h2>How it works</h2>
               <ul>
+              <i className="far fa-check-circle fa-3x"></i>
                 <li>Register for the app here.</li>
+                <i className="fas fa-pencil-alt fa-3x"></i>
                 <li>Fill out a 5 minute daily journal entry that 
                   prompts you to challenge the negative thoughts you had that day.</li>
+                <i className="fas fa-chart-line fa-3x"></i>  
                 <li>View your progress and watch your mood grow with your positive thoughts.</li>
               </ul>
             </div>
