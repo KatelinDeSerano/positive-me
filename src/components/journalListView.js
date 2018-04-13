@@ -6,12 +6,15 @@ import store from "../store"
 
 export class JournalListView extends React.Component {
     
-    onDeleteClick(event) {
-        console.log("clicked");
-        let entryId = this.props.entry.id;
-        let user = this.props.user;
-        this.props.deleteEntry(entryId, user);
+    // onDeleteClick(event) {
+    //     console.log("clicked");
+    //     let entryId = this.props.entry.id;
+    //     let user = this.props.user;
+    //     this.props.deleteEntry(entryId, user);
 
+    // }
+    deleteEntry(id, user) {
+        this.props.dispatch(deleteEntry(id, user));
     }
     // onDeleteClick(entry, user) {
     //     console.log(entry,user);
@@ -23,7 +26,7 @@ export class JournalListView extends React.Component {
             <li key={index} className="listViewMenu">
                 <i className="fas fa-plus" id="icon"></i>
                 <i className="fas fa-trash-alt" id="icon" 
-                    onClick = {deleteEntry(entry.id, this.props.user)}></i>
+                    onClick = {(entry.id, this.props.user) => this.deleteEntry(entry.id, this.props.user)}></i>
                 <i className="far fa-edit" id="icon"></i>
                 <h3 className="journalDate">{entry.date}</h3>  
             </li>
