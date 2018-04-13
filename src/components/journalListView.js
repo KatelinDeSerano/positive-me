@@ -25,8 +25,9 @@ export class JournalListView extends React.Component {
         const journalEntries = this.props.journal.map((entry, index) => (
             <li key={index} className="listViewMenu">
                 <i className="fas fa-plus" id="icon"></i>
-                <i className="fas fa-trash-alt" id="icon" 
-                    onClick = {(entry.id, this.props.user) => this.deleteEntry(entry.id, this.props.user)}></i>
+                <span onClick = {() => this.deleteEntry(entry._id, this.props.user)}>
+                    <i className="fas fa-trash-alt" id="icon"></i>
+                </span>
                 <i className="far fa-edit" id="icon"></i>
                 <h3 className="journalDate">{entry.date}</h3>  
             </li>
