@@ -92,12 +92,13 @@ export const deleteEntry = (id, user) => (dispatch, getState) => {
           Authorization: `Bearer ${authToken}`
       }
   })
-  .then(res => dispatch(deleteEntry(id, user)))
+  .then(res => dispatch(deleteJournalSuccess(id, user)))
 };
 
 export const DELETE_JOURNAL_SUCCESS = "DELETE_JOURNAL_SUCCESS";
 export const deleteJournalSuccess = (id, user) => {
   return {
+    type: DELETE_JOURNAL_SUCCESS
   }
 }
 
