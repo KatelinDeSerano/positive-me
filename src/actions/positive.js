@@ -82,8 +82,8 @@ export const fetchJournal = (user) => (dispatch, getState) => {
     .catch(err => dispatch(fetchJournalError(err)))
 };
 
-export const deleteEntry = (id, user) => (dispatch, getState) => {
-  console.log('action triggered. Entry index:' + id);
+export const deleteEntry = (id, data) => (dispatch, getState) => {
+  console.log('action triggered. Entry index:' + data);
   const authToken = getState().auth.authToken;
   return fetch(`${API_BASE_URL}/positive-me/${id}`, {
       method: 'DELETE',
@@ -92,13 +92,14 @@ export const deleteEntry = (id, user) => (dispatch, getState) => {
           Authorization: `Bearer ${authToken}`
       }
   })
-  .then(res => dispatch(deleteJournalSuccess(id, user)))
+  .then(res => dispatch(deleteJournalSuccess(id, data)))
 };
 
 export const DELETE_JOURNAL_SUCCESS = "DELETE_JOURNAL_SUCCESS";
-export const deleteJournalSuccess = (id, user) => {
+export const deleteJournalSuccess = (id, data) => {
   return {
-    type: DELETE_JOURNAL_SUCCESS
+    type: DELETE_JOURNAL_SUCCESS,
+    data
   }
 }
 

@@ -30,9 +30,8 @@ export const positiveReducer = (state=initialState, action) => {
     return Object.assign({}, state, {error: action.error})
   }
   if (action.type === DELETE_JOURNAL_SUCCESS) {
-    return Object.assign({}, state, {journal: action.data})
+    return Object.assign({}, state, {journal: action.data});
   }
-
   return state;
 }
 
