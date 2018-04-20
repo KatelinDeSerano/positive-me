@@ -114,3 +114,11 @@ export const deleteJournalError = (error) => {
     error
   }
 }
+
+export const TOGGLE_ENTRY_SELECTED = "TOGGLE_ENTRY_SELECTED";
+export const toggleEntrySelected = (data) => {
+  return {
+    type: TOGGLE_ENTRY_SELECTED,
+    data
+  }
+}
