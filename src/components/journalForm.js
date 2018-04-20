@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Field, reduxForm} from 'redux-form';
+import {Field, reduxForm, reset} from 'redux-form';
 import EmojiScale1 from './emojiScale1.js';
 import EmojiScale2 from './emojiScale2.js';
 import './journalForm.css';
@@ -8,13 +8,17 @@ import {postJournalEntry} from '../actions/positive.js';
 import {connect} from 'react-redux';
 
 class JournalForm extends Component {
+  
   onSubmit(values){
     values.date = Date.now();
     values.emojiValue1 = this.props.emojiValue1;
     values.emojiValue2 = this.props.emojiValue2;
     values.user = this.props.user;
     console.log(values);
-    this.props.dispatch(postJournalEntry(values))
+    this.props.dispatch(postJournalEntry(values));
+
+
+
   }
   render() {
     return (
@@ -49,7 +53,19 @@ const mapStateToProps = state => ({
   emojiValue2: state.positiveReducer.emojiValue2,
   user: state.auth.currentUser.username
 })
+// Must have emojis re-render too
+const afterSubmit = (result, dispatch) => {
+  dispatch(reset('journal'));
+  document.getElementsByClassName("selected").className = "empty";
 
-JournalForm = reduxForm({form: "journal"})(JournalForm);
+  // const emojiScale1 = {
+  // className: 'emoji empty'
+  // };
+};
+  
+
+JournalForm = reduxForm({
+  form: "journal",
+  onSubmitSuccess: afterSubmit})(JournalForm);
 JournalForm = connect(mapStateToProps)(JournalForm);
 export default JournalForm;

@@ -14,7 +14,6 @@ export class EmojiScale1 extends React.Component {
 
     emojiClick(value) {
         this.props.dispatch(setEmojiValue1(value));
-        console.log(this.props.value);
     }
     render() {
         return (
