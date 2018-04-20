@@ -11,6 +11,10 @@ export class JournalListView extends React.Component {
         let newArray = data.filter(item => item._id !== data_id);
         this.props.dispatch(deleteEntry(data_id, newArray));
     }
+
+    renderDetailView(data_id, data) {
+
+    }
     
     render () {
         
@@ -20,7 +24,7 @@ export class JournalListView extends React.Component {
                 {/* alter to on click render detail view */}
                 <span onClick = {() => this.deleteEntry(entry._id, this.props.journal)}>
                     <i className="fas fa-plus" id="icon"></i>
-                    </span>
+                </span>
                     <span onClick = {() => this.deleteEntry(entry._id, this.props.journal)}>
                     <i className="fas fa-trash-alt" id="icon"></i>
                 </span>

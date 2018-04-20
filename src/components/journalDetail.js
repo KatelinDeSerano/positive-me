@@ -10,9 +10,7 @@ import happy from '../images/260102-emoji/svg/happy-2.svg';
 export class JournalDetail extends React.Component {
     
     render() {
-        console.log(this.state);
-
-        console.log(this.emoji);
+        
         let negativeThought = this.props.journal.map(entry =>  {
             return entry.negativeThought;
         }); 

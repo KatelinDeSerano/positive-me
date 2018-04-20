@@ -52,6 +52,10 @@ export const postJournalEntry = (journalEntry) => (dispatch, getState) => {
 
 export const FETCH_JOURNAL_SUCCESS = "FETCH_JOURNAL_SUCCESS";
 export const fetchJournalSuccess = (data) => {
+  data.map(entry => {
+    entry.selected = false;
+    return entry;
+  })
   return {
     type: FETCH_JOURNAL_SUCCESS, 
     data
