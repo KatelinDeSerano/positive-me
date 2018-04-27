@@ -7,6 +7,7 @@ class JournalHistory extends Component {
         return(
             <div>
                 <JournalListView />
+                {/* remove Journal Detail,  will me rendered conditionally with list view component */}
                 <JournalDetail />
             </div>
         );
