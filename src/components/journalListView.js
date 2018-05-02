@@ -3,10 +3,13 @@ import './journalListView.css';
 import { connect } from "react-redux";
 import { deleteEntry, toggleEntrySelected } from "../actions/positive.js";
 import store from "../store";
-import JournalDetail from "../components/journalDetail";
+import Moment from 'react-moment';
+// import JournalDetail from "../components/journalDetail";
 
 export class JournalListView extends React.Component {
     // TODO: GET DELETE TO REMOVE LIST ITEMS IN THE RIGHT ORDER
+    mixins: [IntlMixin];
+
     deleteEntry(data_id, data) {
 
         let newArray = data.filter(item => item._id !== data_id);
@@ -24,24 +27,24 @@ export class JournalListView extends React.Component {
     render() {
 
         const journalEntries = this.props.journal.map((entry, index) => {
-            let negativeThought;
 
             if (entry.selected) {
-                console.log(entry._id);
-                
+
             }
             return (
-                <li key={index} className="listViewMenu">
-                    <div className={"viewEntry " + (this.props.journal[index].selected ? "is-closed" : "is-open")}>
+                <li key={index} className={"listViewMenu " + (this.props.journal[index].selected ? "is-open" : "is-closed")}>
+                    <div className="viewEntry">
                         {/* alter to on click render detail view */}
                         <span onClick={() => this.toggleSelected(index, this.props.journal)}>
-                            <i className="fas fa-plus" id="icon"></i>
+                            <i id="icon" className="fas fa-chevron-down"></i>
                         </span>
                         <span onClick={() => this.deleteEntry(entry._id, this.props.journal)}>
                             <i className="fas fa-trash-alt" id="icon"></i>
                         </span>
                         <i className="far fa-edit" id="icon"></i>
-                        <h3 className="journalDate">{entry.date}</h3>
+                        <h3><Moment format="MM/DD/YYYY">
+                            {entry.date}
+                        </Moment></h3>
                     </div>
                     <div id="journalDetail" className="journalContent">
                         <ul>

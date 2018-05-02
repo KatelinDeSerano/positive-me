@@ -1,4 +1,4 @@
-.journalContent p {
+/* .journalContent p {
     font-size: 18px;
 }
 
@@ -32,21 +32,21 @@
 }
 
 .journalDetailMenu {
-    width: 85%;
+    
     height: 2rem;
     margin: auto;
-    border: 1px solid black;
+    
     background-color: turquoise;
 }
 
 .journalContent {
-    width: 85%;
+    
     margin: auto;
-    border: 1px solid black;
+   
     border-top: none;
 }
 
 li {
     list-style: none;
     font-weight: bold;  
-}
+} */

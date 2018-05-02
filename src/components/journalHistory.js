@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import JournalListView from './journalListView.js';
-import JournalDetail from './journalDetail.js';
+// import JournalDetail from './journalDetail.js';
 
 
 class JournalHistory extends Component {

@@ -7,6 +7,7 @@ import Input from './input.js';
 import {postJournalEntry} from '../actions/positive.js';
 import {connect} from 'react-redux';
 
+
 class JournalForm extends Component {
   
   onSubmit(values){
@@ -16,9 +17,6 @@ class JournalForm extends Component {
     values.user = this.props.user;
     console.log(values);
     this.props.dispatch(postJournalEntry(values));
-
-
-
   }
   render() {
     return (
