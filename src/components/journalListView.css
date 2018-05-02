@@ -1,4 +1,4 @@
-.journalListView {
+/* .journalListView {
     padding-left: 0;
 }
 
@@ -41,5 +41,49 @@
     margin: 10px auto;
     border: 1px solid black;
     background-color: turquoise;
-}
+} */
 
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+  }
+  
+  li.listView {
+    width: 100%;
+    background-color: whitesmoke;
+    border: none;
+    outline: none;
+    text-align: left;
+    padding: 15px 20px;
+    font-size: 18px;
+    color: #444;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+  }
+  
+  li.listView:after {
+    content: '\f055';
+    font-family: "fontawesome";
+    font-size: 14px;
+    float: right;
+  }
+  /* take a second look at this to ensure it is working */
+  li.listViewMenu.detail:after {
+    content: '\f056';
+  }
+  
+  li.listViewMenu:hover, li.listViewMenu.is-open {
+    background-color: #ddd;
+  }
+  
+  .journalContent {
+    background-color: white;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+  }
