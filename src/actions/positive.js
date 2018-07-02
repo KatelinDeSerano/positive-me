@@ -1,6 +1,7 @@
 import {API_BASE_URL} from '../config.js';
 import {normalizeResponseErrors} from './utils';
 
+
 export const SET_EMOJI_VALUE_1 = "SET_EMOJI_VALUE_1";
 export const setEmojiValue1 = (value) => {
   return {
@@ -16,6 +17,50 @@ export const setEmojiValue2 = (value) => {
     value
   }
 }
+
+export const LOAD_CURRENT_JOURNAL_ENTRY = "LOAD_CURRENT_JOURNAL_ENTRY";
+export const loadCurrentJournalEntry = (data) => {
+  return {
+    type: LOAD_CURRENT_JOURNAL_ENTRY,
+    data
+  }
+}
+
+export const EDIT_JOURNAL_ENTRY_SUCCESS = "EDIT_JOURNAL_ENTRY_SUCCESS";
+export const editJournalEntrySuccess = (data) => {
+  console.log("Clicked! Route to Edit Page!")
+  return {
+    type: EDIT_JOURNAL_ENTRY_SUCCESS, 
+    data
+  }
+}
+
+export const EDIT_JOURNAL_ENTRY_ERROR = "EDIT_JOURNAL_ENTRY_ERROR";
+export const editJournalEntryError = (error) => {
+  return {
+    type: EDIT_JOURNAL_ENTRY_ERROR, 
+    error
+  }
+}
+
+export const editJournalEntry = (id, journalEntry) => (dispatch, getState) => {
+  const authToken = getState().auth.authToken;
+  return fetch(`${API_BASE_URL}/positive-me/${id}`, {
+      method: 'PUT',
+      headers: {
+          // Provide our auth token as credentials
+          Authorization: `Bearer ${authToken}`, 
+          "Content-Type": 'application/json'
+      },
+      body: JSON.stringify(journalEntry)
+  })
+    .then(res => normalizeResponseErrors(res))
+    .then(res => res.json())
+    .then(data => dispatch(editJournalEntrySuccess(id, data)))
+    .catch(err => dispatch(editJournalEntryError(err)))
+};
+
+
 
 export const POST_JOURNAL_ENTRY_SUCCESS = "POST_JOURNAL_ENTRY_SUCCESS";
 export const postJournalEntrySuccess = (data) => {
@@ -87,7 +132,6 @@ export const fetchJournal = (user) => (dispatch, getState) => {
 };
 
 export const deleteEntry = (id, data) => (dispatch, getState) => {
-  console.log('action triggered. Entry index:' + data);
   const authToken = getState().auth.authToken;
   return fetch(`${API_BASE_URL}/positive-me/${id}`, {
       method: 'DELETE',
@@ -122,3 +166,12 @@ export const toggleEntrySelected = (data) => {
     data
   }
 }
+
+export const TOGGLE_ENTRY_EDIT = "TOGGLE_ENTRY_EDIT";
+export const toggleEntryEdit = (data) => {
+  return {
+    type: TOGGLE_ENTRY_EDIT,
+    data
+  }
+}
+

@@ -22,6 +22,26 @@
   font-size: large;
 }
 
+.auth, button {
+  display: block;
+  text-decoration: none;
+  margin: 10px auto;
+  width: 100px;
+  background: #4E9CAF;
+  padding: 15px;
+  text-align: center;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+}
+
+button {
+  width: 130px;
+}
+
+
 
 
 

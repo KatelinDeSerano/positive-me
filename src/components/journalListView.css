@@ -21,7 +21,7 @@ ul {
   /* li.listViewMenuis-closed:before {
     content: '\f055';;
   } */
-  li.listViewMenu{
+li.listViewMenu{
     list-style: none;
     margin-bottom: 2px;
     width: 100%;
@@ -29,24 +29,24 @@ ul {
     border: none;
     outline: none;
     text-align: left;
-    
+
     font-size: 18px;
     color: #444;
     cursor: pointer;
     transition: background-color 0.2s linear;
-  }
-  
-  /* li.listView:after {
-    content: '\f055';
-    font-family: "fontawesome";
-    font-size: 14px;
-    float: right;
-  } */
-  /* take a second look at this to ensure it is working */
-  /* li.listViewMenuis-open:before {
-    content: '\f056';
-  } */
-  .journalContent {
+}
+
+/* li.listView:after {
+content: '\f055';
+font-family: "fontawesome";
+font-size: 14px;
+float: right;
+} */
+/* take a second look at this to ensure it is working */
+/* li.listViewMenuis-open:before {
+content: '\f056';
+} */
+.journalContent {
     background-color: white;
     border-left: 1px solid whitesmoke;
     border-right: 1px solid whitesmoke;
@@ -54,20 +54,18 @@ ul {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-in-out;
-  }
-  
-  li.listViewMenu.is-closed:hover, li.listViewMenu.is-open {
+}
+
+li.listViewMenu.is-closed:hover, li.listViewMenu.is-open {
     background-color: #ddd;
-  }
-  
-  li.listViewMenu.is-closed .journalContent {
-    
+}
+
+li.listViewMenu.is-closed .journalContent {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-in-out;
-  }
+}
 
-  li.listViewMenu.is-open .journalContent {
+li.listViewMenu.is-open .journalContent {
     list-style: none;
     margin-bottom: 2px;
     outline: none;
@@ -76,17 +74,18 @@ ul {
     font-size: 18px;
     color: #444;
     cursor: pointer;
-    max-height: none;
-  }
+    max-height: 800px;
+    transition: max-height 0.4s ease-in-out;
+}
 
-  li.listViewMenu.is-open .fa-chevron-down {
-    transition: 0.4s;
+li.listViewMenu.is-open .fa-chevron-down {
+    transition: 0.6s;
     transform: rotateX(180deg);
-  }
+}
 
-  .viewEntry h3 {
+.viewEntry h3 {
     text-align: center;
     display: block;
     margin: 0;
     padding-bottom: 30px;
-  }
+}

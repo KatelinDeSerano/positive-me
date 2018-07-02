@@ -9,6 +9,8 @@ import Nav from './nav.js';
 import Dashboard from './dashboard.js';
 import RegistrationPage from './registrationPage.js';
 import LoginPage from './loginPage.js';
+import JournalEditForm from './journalEditForm';
+
 
 export class App extends React.Component {
   componentWillReceiveProps(nextProps) {
@@ -48,6 +50,7 @@ export class App extends React.Component {
             <Route exact path='/' component={LandingPage} />
             <Route exact path='/dashboard' component={Dashboard} />
             <Route exact path='/login' component={LoginPage} />
+            <Route exact path='/journaledit' component={JournalEditForm} />
             <Route exact path='/register' component={RegistrationPage} />
             <Route exact path='/journal_history' component={JournalHistory} />
           </div>

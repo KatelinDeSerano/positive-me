@@ -5,5 +5,8 @@
 .auth {
     display: block;
     text-align: center;
-    
+}
+
+input {
+    width: 100%; 
 }
