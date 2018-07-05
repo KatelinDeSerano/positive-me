@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import {refreshAuthToken} from '../actions/auth';
 import {connect} from "react-redux";
@@ -9,7 +9,7 @@ import Nav from './nav.js';
 import Dashboard from './dashboard.js';
 import RegistrationPage from './registrationPage.js';
 import LoginPage from './loginPage.js';
-import JournalEditForm from './journalEditForm';
+import EditPage from './editPage.js';
 
 
 export class App extends React.Component {
@@ -50,7 +50,7 @@ export class App extends React.Component {
             <Route exact path='/' component={LandingPage} />
             <Route exact path='/dashboard' component={Dashboard} />
             <Route exact path='/login' component={LoginPage} />
-            <Route exact path='/journaledit' component={JournalEditForm} />
+            <Route exact path='/journaledit' component={EditPage} />
             <Route exact path='/register' component={RegistrationPage} />
             <Route exact path='/journal_history' component={JournalHistory} />
           </div>

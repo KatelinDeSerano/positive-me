@@ -1,39 +1,31 @@
 import React from "react";
 import './journalListView.css';
-import { Field, reduxForm, reset } from 'redux-form';
 import { connect } from "react-redux";
 import { deleteEntry, toggleEntrySelected, toggleEntryEdit, loadCurrentJournalEntry, editJournalEntry } from "../actions/positive.js";
-import store from "../store";
 import Moment from 'react-moment';
-import EmojiScale1 from './emojiScale1.js';
-import EmojiScale2 from './emojiScale2.js';
 import './journalForm.css';
-import Input from './input.js';
-import {BrowserRouter as Router, Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // import { Redirect } from 'react-router-dom';
 // import JournalDetail from "../components/journalDetail";
 
 export class JournalListView extends React.Component {
     // TODO: GET DELETE TO REMOVE LIST ITEMS IN THE RIGHT ORDER
-    // mixins: [IntlMixin]
     ;
-
-
 
     deleteEntry(data_id, data) {
         let newArray = data.filter(item => item._id !== data_id);
         this.props.dispatch(deleteEntry(data_id, newArray));
     }
 
-    toggleSelected(index, journal) {
-        journal[index].selected = !journal[index].selected;
+    toggleSelected(_id, journal) {
+        journal[_id].selected = !journal[_id].selected;
         this.props.dispatch(toggleEntrySelected(journal));
         this.forceUpdate();
     }
-    
-    toggleEdit(index, journal) {
-        journal[index].edit = !journal[index].edit;
+
+    toggleEdit(_id, journal) {
+        journal[_id].edit = !journal[_id].edit;
         this.props.dispatch(toggleEntryEdit(journal));
         this.forceUpdate();
     }
@@ -42,10 +34,8 @@ export class JournalListView extends React.Component {
         // this.props.currentJournalEntry = this.props.journal[index]
         this.props.dispatch(loadCurrentJournalEntry(entry));
         // this.preventDefault();
-
-
-
     }
+
     editJournalEntry(data_id, data) {
         // let editEntry = data.filter(item => item._id !== data_id);
         this.props.dispatch(editJournalEntry(data._id, data));
@@ -60,27 +50,23 @@ export class JournalListView extends React.Component {
 
     render() {
 
-        // if(this.props.edit === true) {
-
-        // }
-
-        const journalEntries = this.props.journal.map((entry, index) => {
+        const journalEntries = this.props.journal.map((entry, _id) => {
 
             return (
-                <Router>
-                <li key={entry._id} className={"listViewMenu " + (this.props.journal[index].selected ? "is-open" : "is-closed")}>
+
+                <li key={entry._id} className={"listViewMenu " + (this.props.journal[_id].selected ? "is-open" : "is-closed")}>
                     <div className="viewEntry">
-                        <span onClick={() => this.toggleSelected(index, this.props.journal)}>
+                        <span onClick={() => this.toggleSelected(_id, this.props.journal)}>
                             <i id="icon" className="fas fa-chevron-down"></i>
                         </span>
                         <span onClick={() => this.deleteEntry(entry._id, this.props.journal)}>
 
                             <i className="fas fa-trash-alt" id="icon"></i>
                         </span>
-                        <Link to="/journaledit" exact>
-                        <span onClick={() => this.toggleEdit(index, this.props.journal)}>
-                            <i className="far fa-edit" id="icon"></i>
-                        </span>
+                        <Link to='/journaledit'>
+                            <span onClick={() => this.toggleEdit(_id, this.props.journal)}>
+                                <i className="far fa-edit" id="icon"></i>
+                            </span>
                         </Link>
                         <h3><Moment format="MM/DD/YYYY">
                             {entry.date}
@@ -92,7 +78,7 @@ export class JournalListView extends React.Component {
                             <p id="negThought">{entry.negativeThought}</p>
                             <li>How does that thought make you feel?</li>
                             <img src={entry.negativeFeeling}
-                                className="emoji" />
+                                className="emoji" alt="emoji" />
                             {/* <li>Is there substantial evidence for my thought?</li>
                             <p>{this.state.journal.negativeEvidence}</p> */}
                             <li>Is there evidence contrary to my thought?</li>
@@ -101,20 +87,21 @@ export class JournalListView extends React.Component {
                             <p className="entryField">{entry.positiveThought}</p>
                             <li>How does the postive thought make you feel?</li>
                             <img src={entry.positiveFeeling}
-                                className="emoji" />
+                                className="emoji" alt="emoji" />
                         </ul>
                     </div>
                 </li>
-                </Router>
+
             )
         }
         )
 
-    
         return (
-            <ul className="journalListView">
-                {journalEntries}
-            </ul>
+            
+                <ul className="journalListView">
+                    {journalEntries}
+                </ul>
+            
         );
 
     };
@@ -126,4 +113,5 @@ const mapStateToProps = state => ({
     user: state.auth.currentUser.username,
     editRedirect: state.positiveReducer.editRedirect
 })
+
 export default connect(mapStateToProps)(JournalListView);

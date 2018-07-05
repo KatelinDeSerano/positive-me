@@ -16,8 +16,6 @@ export class Chart extends React.Component {
         let positive = this.props.journal.map(entry => {
             return entry.emojiValue2; 
         });
-        console.log(negative);
-        console.log(positive);
         var chartData = {
             
 

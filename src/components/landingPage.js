@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import {Link, Redirect} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import './landingPage.css';
 import {connect}  from 'react-redux';
 
 
-import LoginPage from './loginPage.js';
+
 
 class LandingPage extends Component {
   render() {
