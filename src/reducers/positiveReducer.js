@@ -7,7 +7,7 @@ import {DELETE_JOURNAL_SUCCESS} from '../actions/positive.js';
 import {LOAD_CURRENT_JOURNAL_ENTRY} from '../actions/positive.js';
 import {EDIT_JOURNAL_ENTRY_SUCCESS} from '../actions/positive.js';
 import {EDIT_JOURNAL_ENTRY_ERROR} from '../actions/positive.js';
-import {TOGGLE_ENTRY_EDIT} from '../actions/positive.js';
+import {LOAD} from '../actions/positive.js';
 
 const initialState = {
     currentUser: null,
@@ -43,9 +43,6 @@ export const positiveReducer = (state=initialState, action) => {
   if (action.type === TOGGLE_ENTRY_SELECTED) {
     return Object.assign({}, state, {journal: action.data});
   }
-  if (action.type === TOGGLE_ENTRY_EDIT) {
-    return Object.assign({}, state, {journal: action.data});
-  }
   if (action.type === EDIT_JOURNAL_ENTRY_ERROR) {
     return Object.assign({}, state, {journal: action.error});
   }
@@ -54,6 +51,9 @@ export const positiveReducer = (state=initialState, action) => {
   }
   if (action.type === LOAD_CURRENT_JOURNAL_ENTRY) {
     return Object.assign({}, state, {currentJournalEntry: action.data});
+  }
+  if (action.type === LOAD) {
+    return Object.assign({}, state, {data: action.data});
   }
   return state;
 }

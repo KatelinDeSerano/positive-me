@@ -167,11 +167,11 @@ export const toggleEntrySelected = (data) => {
   }
 }
 
-export const TOGGLE_ENTRY_EDIT = "TOGGLE_ENTRY_EDIT";
-export const toggleEntryEdit = (data) => {
-  return {
-    type: TOGGLE_ENTRY_EDIT,
-    data
-  }
-}
+export const LOAD = "LOAD";
+export const load = data => ({ 
+  type: LOAD, 
+  data 
+});
+
+
 

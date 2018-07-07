@@ -1,31 +1,34 @@
 import React, { Component } from 'react';
-import {Field, reduxForm, reset} from 'redux-form';
+import { Field, reduxForm, reset } from 'redux-form';
 import EmojiScale1 from './emojiScale1.js';
 import EmojiScale2 from './emojiScale2.js';
 import './journalForm.css';
 import Input from './input.js';
-import {editJournalEntry} from '../actions/positive.js';
-import {connect} from 'react-redux';
+import { editJournalEntry } from '../actions/positive.js';
+import { connect } from 'react-redux';
+import { load as loadAccount} from '../actions/positive.js';
 
-
-class JournalEditForm extends Component {
-  
-  onSubmit(values){
+class InitializeFromStateForm extends Component {
+  onSubmit(values) {
     values.date = Date.now();
-    values.emojiValue1 = this.props.emojiValue1;
-    values.emojiValue2 = this.props.emojiValue2;
+    values.negativeFeeling = this.props.emojiValue1;
+    values.positiveFeeling = this.props.emojiValue2;
     values.user = this.props.user;
     console.log(values);
-    this.props.dispatch(editJournalEntry(values));
+    this.props.dispatch(editJournalEntry(values._id, values));
   }
   render() {
+
     return (
       <div className="form">
         <form
           className="journalForm"
           onSubmit={this.props.handleSubmit(values =>
-              this.onSubmit(values))}>
+            this.onSubmit(values))}>
           <h1>Journal Form</h1>
+          <div>
+            <button type="button" onClick={() => loadAccount(this.props.initialValues)}>Load Account</button>
+          </div>
           <label htmlFor="negativeThought">Negative Thought</label>
           <Field component={Input} type="text" name="negativeThought" />
           <EmojiScale1 />
@@ -37,34 +40,32 @@ class JournalEditForm extends Component {
           <button
             type="submit"
             disabled={this.props.pristine || this.props.submitting}
-            >
+          >
             Submit
-          </button>
+            </button>
         </form>
+        <button type="submit" disabled={this.props.pristine || this.props.submitting}>Submit</button>
+        <button type="button" disabled={this.props.pristine || this.props.submitting} onClick={reset}>
+          Undo Changes
+          </button>
       </div>
     );
-  }
+  };
 }
 
-const mapStateToProps = state => ({
-  currentJournalEntry: state.positiveReducer.currentJournalEntry,
-  emojiValue1: state.positiveReducer.emojiValue1,
-  emojiValue2: state.positiveReducer.emojiValue2,
-  user: state.auth.currentUser.username
-})
-// Must have emojis re-render too
-const afterSubmit = (result, dispatch) => {
-  dispatch(reset('journal'));
-  document.getElementsByClassName("selected").className = "empty";
+// Decorate with reduxForm(). It will read the initialValues prop provided by connect()
+InitializeFromStateForm = reduxForm({
+  form: 'initializeFromState', // a unique identifier for this form
+})(InitializeFromStateForm);
 
-  // const emojiScale1 = {
-  // className: 'emoji empty'
-  // };
-};
-  
+// You have to connect() to any reducers that you wish to connect to yourself
+InitializeFromStateForm = connect(
+  state => ({
+    initialValues: state.positiveReducer.currentJournalEntry,
+    emojiValue1: state.positiveReducer.emojiValue1,
+    emojiValue2: state.positiveReducer.emojiValue2 // pull initial values from account reducer
+  }),
+  { load: loadAccount }, // bind account loading action creator
+)(InitializeFromStateForm);
 
-JournalEditForm = reduxForm({
-  form: "journal",
-  onSubmitSuccess: afterSubmit})(JournalEditForm);
-JournalEditForm = connect(mapStateToProps)(JournalEditForm);
-export default JournalEditForm;
+export default InitializeFromStateForm;

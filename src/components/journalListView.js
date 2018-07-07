@@ -1,7 +1,7 @@
 import React from "react";
 import './journalListView.css';
 import { connect } from "react-redux";
-import { deleteEntry, toggleEntrySelected, toggleEntryEdit, loadCurrentJournalEntry, editJournalEntry } from "../actions/positive.js";
+import { deleteEntry, toggleEntrySelected, loadCurrentJournalEntry, editJournalEntry } from "../actions/positive.js";
 import Moment from 'react-moment';
 import './journalForm.css';
 import { Link } from "react-router-dom";
@@ -21,12 +21,6 @@ export class JournalListView extends React.Component {
     toggleSelected(_id, journal) {
         journal[_id].selected = !journal[_id].selected;
         this.props.dispatch(toggleEntrySelected(journal));
-        this.forceUpdate();
-    }
-
-    toggleEdit(_id, journal) {
-        journal[_id].edit = !journal[_id].edit;
-        this.props.dispatch(toggleEntryEdit(journal));
         this.forceUpdate();
     }
 
@@ -64,7 +58,7 @@ export class JournalListView extends React.Component {
                             <i className="fas fa-trash-alt" id="icon"></i>
                         </span>
                         <Link to='/journaledit'>
-                            <span onClick={() => this.toggleEdit(_id, this.props.journal)}>
+                            <span onClick={() => this.loadCurrentJournalEntry(entry)}>
                                 <i className="far fa-edit" id="icon"></i>
                             </span>
                         </Link>
@@ -111,7 +105,6 @@ const mapStateToProps = state => ({
     currentJournalEntry: state.positiveReducer.currentJournalEntry,
     journal: state.positiveReducer.journal,
     user: state.auth.currentUser.username,
-    editRedirect: state.positiveReducer.editRedirect
 })
 
 export default connect(mapStateToProps)(JournalListView);
