@@ -1,7 +1,8 @@
 import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import {refreshAuthToken} from '../actions/auth';
-import {connect} from "react-redux";
+import {connect, Provider} from "react-redux";
+import store from '../store';
 import './App.css';
 import LandingPage from './landingPage.js';
 import JournalHistory from './journalHistory.js';
@@ -44,17 +45,19 @@ export class App extends React.Component {
 
   render() {
       return (
+        <Provider store={store}>
         <Router>
           <div>
             <Nav />
-            <Route exact path='/' component={LandingPage} />
-            <Route exact path='/dashboard' component={Dashboard} />
-            <Route exact path='/login' component={LoginPage} />
-            <Route exact path='/journaledit' component={EditPage} />
-            <Route exact path='/register' component={RegistrationPage} />
-            <Route exact path='/journal_history' component={JournalHistory} />
+            <Route exact path='/' component={LandingPage} store={store} />
+            <Route exact path='/dashboard' component={Dashboard} store={store} />
+            <Route exact path='/login' component={LoginPage} store={store} />
+            <Route exact path='/journaledit' component={EditPage} store={store} />
+            <Route exact path='/register' component={RegistrationPage} store={store} />
+            <Route exact path='/journal_history' component={JournalHistory} store={store} />
           </div>
         </Router>
+       < /Provider>
       );
   }
 }
