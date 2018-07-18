@@ -6,13 +6,8 @@ import Moment from 'react-moment';
 import './journalForm.css';
 import { Link } from "react-router-dom";
 
-// import { Redirect } from 'react-router-dom';
-// import JournalDetail from "../components/journalDetail";
-
 export class JournalListView extends React.Component {
-    // TODO: GET DELETE TO REMOVE LIST ITEMS IN THE RIGHT ORDER
-    ;
-
+   
     deleteEntry(data_id, data) {
         let newArray = data.filter(item => item._id !== data_id);
         this.props.dispatch(deleteEntry(data_id, newArray));
@@ -25,22 +20,12 @@ export class JournalListView extends React.Component {
     }
 
     loadCurrentJournalEntry(entry) {
-        // this.props.currentJournalEntry = this.props.journal[index]
         this.props.dispatch(loadCurrentJournalEntry(entry));
-        // this.preventDefault();
     }
 
     editJournalEntry(data_id, data) {
-        // let editEntry = data.filter(item => item._id !== data_id);
         this.props.dispatch(editJournalEntry(data._id, data));
     }
-
-    // ON CLICK OF EDIT BUTTON
-    // 1. Load current state of current journal entry
-    // 2. Route to Edit Page
-    // 3. Edit page populates with current state of current journal entry
-    // 4. initialize PUT action - modeled after post request
-    // 5. After submit, revert back to list view page
 
     render() {
 
@@ -94,10 +79,8 @@ export class JournalListView extends React.Component {
             
                 <ul className="journalListView">
                     {journalEntries}
-                </ul>
-            
+                </ul> 
         );
-
     };
 };
 

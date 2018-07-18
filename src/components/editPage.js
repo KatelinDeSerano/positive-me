@@ -1,6 +1,6 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {Redirect} from 'react-router-dom';
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import JournalEditForm from './journalEditForm.js';
 // TO DO: add handle error for login
 
@@ -11,13 +11,10 @@ export function EditPage(props) {
         return <Redirect to="/login" />;
     }
     return (
-        
         <div className="home">
             <h2>EDIT</h2>
             <JournalEditForm />
-            
         </div>
-        
     );
 }
 
