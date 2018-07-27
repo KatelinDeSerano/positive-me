@@ -6,6 +6,12 @@ import Moment from 'react-moment';
 import './journalForm.css';
 import { Link } from "react-router-dom";
 
+import crying from '../images/260102-emoji/svg/crying-2.svg';
+import sad from '../images/260102-emoji/svg/sad-2.svg';
+import neutral from '../images/260102-emoji/svg/confused.svg';
+import happy from '../images/260102-emoji/svg/happy-2.svg';
+import coolFace from '../images/260102-emoji/svg/cool-1.svg';
+
 export class JournalListView extends React.Component {
    
     deleteEntry(data_id, data) {
@@ -30,6 +36,30 @@ export class JournalListView extends React.Component {
     render() {
 
         const journalEntries = this.props.journal.map((entry, _id) => {
+            let negativeEmoji, positiveEmoji;
+            if (entry.emojiValue1 === 1) {
+                negativeEmoji = crying;
+            } else if (entry.emojiValue1 === 2) {
+                negativeEmoji = sad;
+            } else if (entry.emojiValue1 === 3) {
+                negativeEmoji = neutral;
+            } else if (entry.emojiValue1 === 4) {
+                negativeEmoji = happy;
+            } else if (entry.emojiValue1 === 5) {
+                negativeEmoji = coolFace;
+            }
+            if (entry.emojiValue2 === 1) {
+                positiveEmoji = crying;
+            } else if (entry.emojiValue2 === 2) {
+                positiveEmoji = sad;
+            } else if (entry.emojiValue2 === 3) {
+                positiveEmoji = neutral;
+            } else if (entry.emojiValue2 === 4) {
+                positiveEmoji = happy;
+            } else if (entry.emojiValue2 === 5) {
+                positiveEmoji = coolFace;
+            }
+console.log(negativeEmoji)
 
             return (
 
@@ -53,19 +83,19 @@ export class JournalListView extends React.Component {
                     </div>
                     <div id="journalDetail" className="journalContent">
                         <ul>
-                            <li>Describe a negative thought or thoughts you had today:</li>
+                            <li className="label">Describe a negative thought or thoughts you had today:</li>
                             <p id="negThought">{entry.negativeThought}</p>
-                            <li>How does that thought make you feel?</li>
-                            <img src={entry.negativeFeeling}
+                            <li className="label">How does that thought make you feel?</li>
+                            <img src={negativeEmoji}
                                 className="emoji" alt="emoji" />
                             {/* <li>Is there substantial evidence for my thought?</li>
                             <p>{this.state.journal.negativeEvidence}</p> */}
-                            <li>Is there evidence contrary to my thought?</li>
+                            <li className="label">Is there evidence contrary to my thought?</li>
                             <p className="entryField" >{entry.evidenceAgainstThought}</p>
-                            <li>What would a positive alternative thought be in this instance?</li>
+                            <li className="label">What would a positive alternative thought be in this instance?</li>
                             <p className="entryField">{entry.positiveThought}</p>
-                            <li>How does the postive thought make you feel?</li>
-                            <img src={entry.positiveFeeling}
+                            <li className="label">How does the postive thought make you feel?</li>
+                            <img src={positiveEmoji}
                                 className="emoji" alt="emoji" />
                         </ul>
                     </div>

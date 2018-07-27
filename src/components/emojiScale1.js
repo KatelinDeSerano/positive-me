@@ -3,7 +3,6 @@ import './emojiScale.css';
 import {connect} from "react-redux";
 import {setEmojiValue1} from "../actions/positive.js";
 
-
 import coolFace from '../images/260102-emoji/svg/cool-1.svg';
 import crying from '../images/260102-emoji/svg/crying-2.svg';
 import sad from '../images/260102-emoji/svg/sad-2.svg';
