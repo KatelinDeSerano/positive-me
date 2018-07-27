@@ -8,6 +8,6 @@ it('Renders without crashing', () => {
     shallow(
     <Provider store={store} >
     <EmojiScale1 />
-    < /Provider>
+    </Provider>
     );
 });

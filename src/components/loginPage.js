@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link, Redirect} from 'react-router-dom';
 import LoginForm from './loginForm.js';
+import './loginPage.css';
 // TO DO: add handle error for login
 
 export function LoginPage(props) {

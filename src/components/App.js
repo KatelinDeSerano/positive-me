@@ -57,7 +57,7 @@ export class App extends React.Component {
             <Route exact path='/journal_history' component={JournalHistory} store={store} />
           </div>
         </Router>
-       < /Provider>
+       </Provider>
       );
   }
 }

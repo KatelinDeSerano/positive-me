@@ -8,7 +8,7 @@ it('Renders without crashing', () => {
     shallow(
     <Provider store={store} >
     <Nav />
-    < /Provider>
+    </Provider>
     );
 });
 

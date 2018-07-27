@@ -8,5 +8,25 @@
 }
 
 input {
-    width: 100%; 
+    padding: 2px;
+    width: 80%; 
+    height: 20px;
+}
+
+.home {
+    margin: 50px auto;
+    padding: 30px;
+    width: 30%;
+    border: 0.5px solid grey;
+    border-radius: 2%;
+    background-color: white;
+    
+}
+
+html {
+    background: linear-gradient(to bottom right, #21897E, #66DDCB);
+}
+
+button, a {
+    display: inline;
 }

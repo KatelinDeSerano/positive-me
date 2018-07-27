@@ -23,7 +23,7 @@
 }
 
 .auth, button {
-  display: block;
+  display: inline-block;
   text-decoration: none;
   margin: 10px auto;
   width: 100px;

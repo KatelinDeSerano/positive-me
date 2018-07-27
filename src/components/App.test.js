@@ -10,6 +10,6 @@ it('renders without crashing', () => {
   shallow(
   <Provider store={store}>  
     <App />
-  < /Provider>
+  </Provider>
   );
 });
