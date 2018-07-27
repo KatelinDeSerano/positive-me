@@ -89,3 +89,7 @@ li.listViewMenu.is-open .fa-chevron-down {
     margin: 0;
     padding-bottom: 30px;
 }
+
+.label {
+    font-weight: bold;
+}
