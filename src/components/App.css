@@ -27,7 +27,7 @@
   text-decoration: none;
   margin: 10px auto;
   width: 100px;
-  background: #4E9CAF;
+  background: linear-gradient(to bottom right, #24968B, #70F4E0);
   padding: 15px;
   text-align: center;
   border-radius: 50px;
@@ -41,7 +41,10 @@ button {
   width: 130px;
 }
 
-
+body {
+  background: linear-gradient(to right, #24968B, #70F4E0);
+  height: 100%;
+}
 
 
 

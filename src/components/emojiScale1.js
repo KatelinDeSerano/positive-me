@@ -17,7 +17,7 @@ export class EmojiScale1 extends React.Component {
     render() {
         return (
             <div className="emojiScale1">
-                <label>How do you feel?</label>
+                <label>How did you feel?</label>
                 <div className="emojiSelect">
                     <img src={crying} className={"emoji " + (this.props.value===1 ? "selected" : "empty") } 
                         alt="crying face" onClick={()=>this.emojiClick(1)}/>

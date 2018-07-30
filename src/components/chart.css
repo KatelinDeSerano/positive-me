@@ -1,6 +1,11 @@
 .chart {
     height: 100px;
-    width: 600px;
+    width: 400px;
     float: right;
-    padding: 75px;
+    padding: 30px;
+}
+
+canvas {
+    background-color: white;
+    border-radius: 1%;
 }
