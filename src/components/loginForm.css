@@ -1,0 +1,25 @@
+input {
+    width: 80%;
+    margin-bottom: 30px;
+    padding: 5px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: .5px solid lightgray;
+    font-size: 16px;
+    font-style: italic;
+}
+
+input:focus {
+   width: 95%; 
+   font-size: 20px;
+   border-bottom: 1.5px solid teal;
+   color: black;
+   outline: 0;
+   transition: 0.2s ease-in-out;
+}
+
+.form-error {
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

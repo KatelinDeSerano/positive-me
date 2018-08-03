@@ -60,14 +60,11 @@ const mapStateToProps = state => ({
   emojiValue2: state.positiveReducer.emojiValue2,
   user: state.auth.currentUser.username
 })
-// Must have emojis re-render too
+
 const afterSubmit = (result, dispatch) => {
   dispatch(reset('journal'));
+  alert("form has successfully been submitted!");
   document.getElementsByClassName("selected").className = "empty";
-
-  // const emojiScale1 = {
-  // className: 'emoji empty'
-  // };
 };
 
 
