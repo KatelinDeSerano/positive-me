@@ -23,20 +23,20 @@ export class Chart extends React.Component {
             datasets: [
                 {
                     label: "My Negative Feelings",
-                    backgroundColor: "#42f4eb",
-                    borderColorr: "#42f4eb",
+                    backgroundColor: "rgb(51, 189, 175)",
+                    borderColorr: "rgb(51, 189, 175)",
                     borderWidth: 1,
-                    hoverBackgroundColor: "#42f4eb",
-                    hoverBorderColor: "#42f4eb",
+                    hoverBackgroundColor: "rgb(51, 189, 175)",
+                    hoverBorderColor: "rgb(51, 189, 175)",
                     data: negative
                 },
                 {
                     label: "My Positive Feelings",
-                    backgroundColor: '#f4df41',
-                    borderColor: '#f4df41',
+                    backgroundColor: 'rgb(239, 237, 81)',
+                    borderColor: 'rgb(239, 237, 81)',
                     borderWidth: 1,
-                    hoverBackgroundColor: '#f4df41',
-                    hoverBorderColor: '#f4df41',
+                    hoverBackgroundColor: 'rgb(239, 237, 81)',
+                    hoverBorderColor: 'rgb(239, 237, 81)',
                     data: positive
                 }
             ]
@@ -104,7 +104,7 @@ export class Chart extends React.Component {
         
         return (
             <div className="chart">
-                <BarChart data={chartData} options={chartOptions} width={400} height={250} />
+                <BarChart data={chartData} options={chartOptions} width={400} height={200} />
             </div>
         );
     }

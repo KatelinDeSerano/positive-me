@@ -1,10 +1,11 @@
 .nav {
     list-style-type: none;
     margin: 0;
-    padding: 10px;
+    padding: 20px;
     overflow: hidden;
-    background-color: #333;
-    color: white;
+    background-color: #444;
+    color: #F6F7EB;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.577);
 }
 
 .nav li {
@@ -13,12 +14,16 @@
     margin: 10;
 }
 
-.nav li a{
+.nav li a {
     margin: 10;
-    color: white;
+    color: #F6F7EB;
     text-decoration: none;
     padding-right: 15px;
     
+}
+
+.nav li a:hover {
+    color: greenyellow;
 }
 
 .logout {

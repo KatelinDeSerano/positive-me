@@ -1,22 +1,28 @@
 ul {
-    list-style: none;  
+    list-style: none; 
+    -webkit-padding-start: 0; 
 }
 
-.fa-trash-alt, .fa-edit{
-    
+.fa-trash-alt, .fa-edit {
     float: right;
     transition: all .2s ease-in-out;
+}
+
+.fa-trash-alt:hover, .fa-edit:hover {
+    float: right;    
+    transform: scale(1.1);
 }
 
 #icon {
     margin: 15px;
     margin-bottom: 0;
+    color: #444;
 }
 
 .journalListView {
     width: 85%;
-    max-width: 800px;
     margin: 50px auto;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.577); 
   }
   /* li.listViewMenuis-closed:before {
     content: '\f055';;
@@ -25,12 +31,12 @@ li.listViewMenu{
     list-style: none;
     margin-bottom: 2px;
     width: 100%;
-    background-color: whitesmoke;
+    background-color: #F6F7EB;
     border: none;
     outline: none;
     text-align: left;
 
-    font-size: 18px;
+    font-size: 22px;
     color: #444;
     cursor: pointer;
     transition: background-color 0.2s linear;
@@ -50,14 +56,13 @@ content: '\f056';
     background-color: white;
     border-left: 1px solid whitesmoke;
     border-right: 1px solid whitesmoke;
-    padding: 0 20px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-in-out;
 }
 
 li.listViewMenu.is-closed:hover, li.listViewMenu.is-open {
-    background-color: #ddd;
+    background-color: rgb(222, 223, 210);
 }
 
 li.listViewMenu.is-closed .journalContent {
@@ -71,7 +76,8 @@ li.listViewMenu.is-open .journalContent {
     outline: none;
     text-align: left;
     padding: 15px 20px;
-    font-size: 18px;
+    font-size: 22px;
+    font-family: 'Shadows Into Light';
     color: #444;
     cursor: pointer;
     max-height: 800px;
@@ -91,5 +97,14 @@ li.listViewMenu.is-open .fa-chevron-down {
 }
 
 .label {
+    font-family: 'Roboto';
     font-weight: bold;
+    font-size: 24px;
+    text-decoration: underline;
+    margin: 10px 0px;
+}
+
+.emoji {
+    background-color: yellow;
+    margin: 15px;
 }

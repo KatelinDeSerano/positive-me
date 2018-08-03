@@ -1,9 +1,9 @@
 .chart {
     height: 100px;
-    width: 400px;
+    width: 40%;
     float: right;
-    padding: 30px;
-}
+    padding: 75px;
+} 
 
 canvas {
     background-color: white;
