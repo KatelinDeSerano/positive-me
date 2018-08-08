@@ -22,7 +22,7 @@
   font-size: large;
 }
 
-.auth, button {
+.button, button {
   display: inline-block;
   text-decoration: none;
   margin: 10px auto;
@@ -35,10 +35,6 @@
   font-weight: bold;
   font-size: 14px;
   border: none;
-}
-
-button {
-  width: 130px;
 }
 
 body {

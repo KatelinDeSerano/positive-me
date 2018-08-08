@@ -20,22 +20,29 @@ class LandingPage extends Component {
             and replace those thoughts with more postiive ones.
             </p>
         </div>
+
+        <h2>How it works</h2>
         <div className="howItWorks">
-          <h2>How it works</h2>
-          <ul>
+          <div className="howItWorksPoint">
             <i className="far fa-check-circle fa-3x"></i>
-            <li>Register for the app here.</li>
+            <h3>Register for the app here.</h3>
+          </div>
+          <div className="howItWorksPoint">
             <i className="fas fa-pencil-alt fa-3x"></i>
-            <li>Fill out a 5 minute daily journal entry that
-                  prompts you to challenge the negative thoughts you had that day.</li>
+            <h3>Fill out a 5 minute daily journal entry that
+                  prompts you to challenge the negative thoughts you had that day.</h3>
+          </div>
+          <div className="howItWorksPoint">
             <i className="fas fa-chart-line fa-3x"></i>
-            <li>View your progress and watch your mood grow with your positive thoughts.</li>
-          </ul>
+            <h3>View your progress and watch your mood grow with your positive thoughts.</h3>
+          </div>
         </div>
         <div className="registrationPage">
           <span>
-            <Link to="/login" className="auth">Login </ Link>
-            <Link to="/register" className="auth">Register</ Link>
+            <div className="authButtons">
+              <Link to="/login" className="button" > Login </ Link>
+              <Link to="/register" className="button" > Register</ Link>
+            </div>
           </span>
         </div>
       </div>
