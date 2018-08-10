@@ -92,7 +92,10 @@ export const postJournalEntry = (journalEntry) => (dispatch, getState) => {
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
     .then(data => dispatch(postJournalEntrySuccess(data)))
-    .catch(err => dispatch(postJournalEntryError(err)))
+    .catch(err => { 
+      console.log(err);
+      dispatch(postJournalEntryError(err))
+    })
 };
 
 export const FETCH_JOURNAL_SUCCESS = "FETCH_JOURNAL_SUCCESS";

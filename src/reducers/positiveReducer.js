@@ -30,7 +30,7 @@ export const positiveReducer = (state=initialState, action) => {
     return Object.assign({}, state, { 
       emojiValue1: 0, 
       emojiValue2: 0, 
-      journal:[...state.positiveReducer.journal, action.data] 
+      journal:[...state.journal, action.data] 
     })
   }
   if (action.type === POST_JOURNAL_ENTRY_ERROR) {
