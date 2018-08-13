@@ -5,5 +5,31 @@
 .auth {
     display: block;
     text-align: center;
+}
+
+
+input {
+    padding: 2px;
+    width: 80%; 
+    height: 20px;
+}
+
+.home {
+    margin: 50px auto;
+    padding: 30px;
+    width: 30%;
+    border: 0.5px solid grey;
+    border-radius: 2%;
+    background-color: white;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.577);
     
 }
+
+html {
+    background: linear-gradient(to bottom right, #24968B, #70F4E0);
+}
+
+button, a {
+    display: inline;
+}
+

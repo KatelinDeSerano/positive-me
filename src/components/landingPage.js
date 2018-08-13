@@ -3,13 +3,19 @@ import { Link } from 'react-router-dom';
 import './landingPage.css';
 import { connect } from 'react-redux';
 
+
 class LandingPage extends Component {
   render() {
     return (
+      
       <div className="landingPage">
         <div className="hero">
           <h1>Raise your positive inner voice.</h1>
-          <p>We are our own toughest critics. Sometimes, that inner-voice
+          <div className="authButtons">
+              <Link to="/login" className="button" > Login </ Link>
+              <Link to="/register" className="button" > Register</ Link>
+            </div>
+          {/* <p>We are our own toughest critics. Sometimes, that inner-voice
             becomes so negative that we feel like failures,
             or that we will never be good enough.
           </p>
@@ -18,11 +24,11 @@ class LandingPage extends Component {
            We help you train your inner-voice by helping you to
            challenge your negative thoughts,
             and replace those thoughts with more postiive ones.
-            </p>
+            </p> */}
         </div>
-
-        <h2>How it works</h2>
         <div className="howItWorks">
+        <h2>How it works</h2>
+        
           <div className="howItWorksPoint">
             <i className="far fa-check-circle fa-3x"></i>
             <h3>Register for the app here.</h3>

@@ -1,26 +1,20 @@
-.registrationForm {
-    padding: 5rem;
-    text-align: center;
-    border: 1px solid lavenderblush;
-    background-color: lavenderblush;
-}
-
 .hero {
-    background: url(../images/thumbs_up.jpeg) no-repeat center fixed;
+    background: url(../images/thumbs_up.jpg) no-repeat center;
     background-color:rgba(64, 200, 224, 0.652);
     background-blend-mode: multiply;
     background-size: cover; 
     color: white;
-    height: 100vh;
-    width: 100vw;
+    height: 60vh;
+    width: 100%;
 }
 
 /* TODO: Fix paragraph to look nice */
 .hero h1 {
-    margin: 0;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    padding-top: 1em;
     text-align: center;
-    font-size: 5rem;
-    padding: 2rem;
+    font-size: 80px;
 }
 
 .hero p {
@@ -32,8 +26,10 @@
 }
 
 .howItWorks {
+    background-color: white;
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33% 33% 33%;
     grid-gap: 10px;
     justify-content: space-evenly;
     padding: 20px;

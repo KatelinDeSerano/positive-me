@@ -10,11 +10,20 @@ export class Dashboard extends Component {
         this.props.dispatch(fetchJournal(this.props.user))
     }
     render(){
+        let showError;
         if (!this.props.loggedIn) {
             return <Redirect to="/login" />;
         }
+        if (this.props.error) {
+            showError = 
+            <p>We have an error</p>
+        } else {
+            showError = 
+            <p></p>
+        }
         return (
             <div>
+                {showError}
                 <Chart />
                 <JournalForm />
             </div>
@@ -24,7 +33,8 @@ export class Dashboard extends Component {
 
 const mapStateToProps = state => ({
     user: state.auth.currentUser.username,
-    loggedIn: state.auth.currentUser !== null
+    loggedIn: state.auth.currentUser !== null, 
+    error: state.positiveReducer.error
 });
 
 export default connect(mapStateToProps)(Dashboard);

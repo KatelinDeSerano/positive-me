@@ -11,7 +11,7 @@ export function RegistrationPage(props) {
         return <Redirect to="/dashboard" />;
     }
     return (
-        <div className="home">
+        <div className="login">
             <h2>Register for PositiveMe</h2>
             <span>
             <RegistrationForm />
