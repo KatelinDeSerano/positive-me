@@ -1,3 +1,9 @@
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
 .hero {
     background: url(../images/thumbs_up.jpg) no-repeat center;
     background-color:rgba(64, 200, 224, 0.652);
@@ -25,28 +31,26 @@
     padding: 1rem;
 }
 
-.howItWorks {
+.info {
     background-color: white;
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 33% 33% 33%;
-    grid-gap: 10px;
-    justify-content: space-evenly;
     padding: 20px;
     text-align: center;
 }
 .landingPage h2 {
-    font-size: 2rem;
-    text-decoration: underline;
+    font-size: 4rem;
     text-align: center;
+    margin: auto;
 }
 
-.howItWorks i {
+.info i {
     font-size: 30px;
 }
 
-.howItWorksPoint {
-    width: 100%;
+.howItWorks h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin: auto;
 }
 
 .authButtons {
