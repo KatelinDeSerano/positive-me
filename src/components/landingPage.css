@@ -1,8 +1,17 @@
+.landingPage span {
+    display: inline-block;
+}
+
 .row::after {
     content: "";
     clear: both;
     display: table;
   }
+
+.row {
+      border: solid 1px red;
+      height: 370px;
+}
 
 .hero {
     background: url(../images/thumbs_up.jpg) no-repeat center;
@@ -33,18 +42,25 @@
 
 .info {
     background-color: white;
-    display: grid;
-    padding: 20px;
-    text-align: center;
 }
 .landingPage h2 {
-    font-size: 4rem;
-    text-align: center;
-    margin: auto;
+    font-size: 3.85rem;
+    text-align: right;
+    padding: 20px;
+    background-color: yellow;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    height: 300px;
+    width: 300px;
+    font-weight: normal;
 }
 
-.info i {
+.landingPage p {
     font-size: 30px;
+    text-align: left;
+    padding: 3.85rem 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
 }
 
 .howItWorks h2 {
@@ -53,9 +69,18 @@
     margin: auto;
 }
 
+.landingPage span::before p {
+    margin: 10px;
+}
+
 .authButtons {
     width: 30%;
     display: grid;
     grid-template-columns: auto auto;
     margin: 5px auto;
 }
+
+td h3 {
+    margin: 40px 15px;
+}
+

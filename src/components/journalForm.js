@@ -15,7 +15,6 @@ class JournalForm extends Component {
     values.emojiValue1 = this.props.emojiValue1;
     values.emojiValue2 = this.props.emojiValue2;
     values.user = this.props.user;
-    console.log(values);
     this.props.dispatch(postJournalEntry(values));
   }
   render() {
@@ -63,7 +62,6 @@ const mapStateToProps = state => ({
 
 const afterSubmit = (result, dispatch) => {
   dispatch(reset('journal'));
-  alert("form has successfully been submitted!");
   document.getElementsByClassName("selected").className = "empty";
 };
 
