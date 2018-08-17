@@ -7,9 +7,7 @@ import Input from './input.js';
 import { postJournalEntry } from '../actions/positive.js';
 import { connect } from 'react-redux';
 
-
 class JournalForm extends Component {
-
   onSubmit(values) {
     values.date = Date.now();
     values.emojiValue1 = this.props.emojiValue1;
@@ -64,7 +62,6 @@ const afterSubmit = (result, dispatch) => {
   dispatch(reset('journal'));
   document.getElementsByClassName("selected").className = "empty";
 };
-
 
 JournalForm = reduxForm({
   form: "journal",
