@@ -12,7 +12,6 @@ export function EditPage(props) {
     }
     return (
         <div className="home">
-            <h2>EDIT</h2>
             <JournalEditForm />
         </div>
     );

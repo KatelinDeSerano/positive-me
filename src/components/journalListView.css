@@ -31,7 +31,7 @@ li.listViewMenu{
     list-style: none;
     margin-bottom: 2px;
     width: 100%;
-    background-color: #F6F7EB;
+    background-color: whitesmoke;
     border: none;
     outline: none;
     text-align: left;
@@ -62,7 +62,7 @@ content: '\f056';
 }
 
 li.listViewMenu.is-closed:hover, li.listViewMenu.is-open {
-    background-color: rgb(222, 223, 210);
+    background-color: gainsboro;
 }
 
 li.listViewMenu.is-closed .journalContent {

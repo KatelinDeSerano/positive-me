@@ -8,6 +8,11 @@
     box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.577);
 }
 
+#editForm {
+    width: 60%;
+    margin: 50px auto;
+}
+
 label{
     font-family: 'Shadows Into Light';
     font-size: 22px;

@@ -23,12 +23,10 @@ class InitializeFromStateForm extends Component {
       <div className="form">
         <form
           className="journalForm"
+          id="editForm"
           onSubmit={this.props.handleSubmit(values =>
             this.onSubmit(values))}>
-          <h1>Journal Form</h1>
-          <div>
-            <button type="button" onClick={() => loadAccount(this.props.initialValues)}>Load Account</button>
-          </div>
+          <h1>Journal Edit Form</h1>
           <label htmlFor="negativeThought">Negative Thought</label>
           <Field component={Input} type="text" name="negativeThought" />
           <EmojiScale1 />
@@ -44,10 +42,6 @@ class InitializeFromStateForm extends Component {
             Submit
             </button>
         </form>
-        <button type="submit" disabled={this.props.pristine || this.props.submitting}>Submit</button>
-        <button type="button" disabled={this.props.pristine || this.props.submitting} onClick={reset}>
-          Undo Changes
-          </button>
       </div>
     );
   };
