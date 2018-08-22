@@ -1,1 +1,1 @@
-exports.API_BASE_URL = process.env.API_BASE_URL || 'lit-shelf-99422.herokuapp.com/';
+exports.API_BASE_URL = process.env.API_BASE_URL || 'https://lit-shelf-99422.herokuapp.com/';
