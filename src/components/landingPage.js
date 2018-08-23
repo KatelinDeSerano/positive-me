@@ -16,7 +16,7 @@ class LandingPage extends Component {
             <Link to="/register" className="button" > Register</ Link>
           </div>
         </div>
-        <div className="info">
+        <div id="info">
           <div className="row">
             <div className="col-4">
               <h2>We are<br></br>
@@ -30,7 +30,7 @@ class LandingPage extends Component {
             </div>
           </div>
         </div>
-        <div className="info">
+        <div id="valueProposition">
           <div className="row">
             <div className="col-7" >
               <p>PositiveMe helps dial down that inner-critic.
@@ -44,7 +44,7 @@ class LandingPage extends Component {
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row" id='howItWorks'>
           <div className="col-4">
             <h2>How it works</h2>
           </div>
@@ -53,7 +53,7 @@ class LandingPage extends Component {
               <tbody>
                 <tr>
                   <td><i className="far fa-check-circle fa-3x"></i></td>
-                  <td><h3>Register for the app here.</h3></td>
+                  <td><h3>Register for the app <Link to="/register">here.</Link></h3></td>
                 </tr>
                 <tr>
                   <td><i className="fas fa-pencil-alt fa-3x"></i></td>

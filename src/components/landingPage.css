@@ -9,7 +9,6 @@
   }
 
 .row {
-      border: solid 1px red;
       height: 370px;
 }
 
@@ -40,33 +39,47 @@
     padding: 1rem;
 }
 
-.info {
+#info {
+    background-color: white;
+    color: rgb(14, 14, 58);
+}
+
+.landingPage .col-4 {
+    background-color: rgb(14, 14, 58);
+    color: white;
+}
+
+#howItWorks {
     background-color: white;
 }
+
+#valueProposition {
+    background: url(../images/daisies.jpeg) no-repeat center;
+    background-color:rgba(64, 200, 224, 0.652);
+    background-blend-mode: multiply;
+    background-size: cover; 
+    color: white;
+    width: 100vw;
+}
+
 .landingPage h2 {
-    font-size: 3.85rem;
+    font-size: 3.3rem;
     text-align: right;
     padding: 20px;
-    background-color: yellow;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
     height: 300px;
     width: 300px;
-    font-weight: normal;
+    font-weight: bold;
+    font-family: 'Shadows Into Light';
 }
 
 .landingPage p {
     font-size: 30px;
     text-align: left;
-    padding: 3.85rem 0;
+    padding: 3.85rem 1.5rem;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
-}
-
-.howItWorks h2 {
-    font-size: 3rem;
-    text-align: center;
-    margin: auto;
 }
 
 .landingPage span::before p {
@@ -80,7 +93,19 @@
     margin: 5px auto;
 }
 
-td h3 {
-    margin: 40px 15px;
+.authButtons a {
+    background-color: rgb(14, 14, 58);
+    color: white;;
 }
 
+td h3 {
+    margin: 40px 15px;
+    color: rgb(14, 14, 58);
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}

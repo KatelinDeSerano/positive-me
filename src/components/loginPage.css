@@ -26,7 +26,7 @@ input {
 }
 
 html {
-    background: linear-gradient(to bottom right, #24968B, #70F4E0);
+    background-color: rgb(51, 189, 175);
 }
 
 button, a {
