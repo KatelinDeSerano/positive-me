@@ -26,9 +26,9 @@
 .hero h1 {
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
-    padding-top: 1em;
+    padding: 1em 0;
     text-align: center;
-    font-size: 80px;
+    font-size: 4em;
 }
 
 .hero p {
@@ -103,9 +103,17 @@ td h3 {
     color: rgb(14, 14, 58);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768 px) {
     /* For mobile phones: */
     [class*="col-"] {
         width: 100%;
     }
+    .authButtons {
+        width: 100%;
+    }
+
+    .hero {
+        height: 80vh;
+    }
+    
 }
