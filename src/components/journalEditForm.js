@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Field, reduxForm, reset } from 'redux-form';
+import { Field, reduxForm } from 'redux-form';
 import EmojiScale1 from './emojiScale1.js';
 import EmojiScale2 from './emojiScale2.js';
 import './journalForm.css';
