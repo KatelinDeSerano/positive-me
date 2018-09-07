@@ -1,1 +1,1 @@
-exports.API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:8080';
+exports.API_BASE_URL = 'https://vast-spire-41621.herokuapp.com' || 'http://localhost:8080';
