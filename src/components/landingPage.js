@@ -23,32 +23,33 @@ class LandingPage extends Component {
                 our own
                 toughest critics.</h2>
             </div>
-            <div className="col-7">
+            <div className="col-7" id="paragraph">
               <p>Sometimes, that inner-voice
                 becomes so negative that we feel like failures,
             or that we will never be good enough.</p>
+            <p> Sound familiar? We can help. </p>
             </div>
           </div>
         </div>
-        <div id="valueProposition">
-          <div className="row">
-            <div className="col-7" >
+        
+          <div className="row" id="valueProposition">
+            {/* <div className="col-4">
+              <h2>Sound familiar? <br></br> We can help. </h2>
+            </div> */}
+            <div className="col-12"  >
               <p>PositiveMe helps dial down that inner-critic.
                  We help you train your inner-voice by helping you to
                  challenge your negative thoughts,
                   and replace those thoughts with more postiive ones.
             </p>
             </div>
-            <div className="col-4">
-              <h2>Sound familiar? <br></br> We can help. </h2>
-            </div>
           </div>
-        </div>
-        <div className="row" id='howItWorks'>
-          <div className="col-4">
+        
+        <div className="row" >
+          <div className="col-4" id='howItWorks'>
             <h2>How it works</h2>
           </div>
-          <div className="col-7">
+          <div className="col-7" id="paragraph">
             <table>
               <tbody>
                 <tr>

@@ -49,10 +49,6 @@
     color: white;
 }
 
-#howItWorks {
-    background-color: white;
-}
-
 #valueProposition {
     background: url(../images/daisies.jpeg) no-repeat center;
     background-color:rgba(64, 200, 224, 0.652);
@@ -60,6 +56,11 @@
     background-size: cover; 
     color: white;
     width: 100vw;
+}
+
+#valueProposition p {
+    margin: auto;
+    padding: 3em
 }
 
 .landingPage h2 {
@@ -77,7 +78,7 @@
 .landingPage p {
     font-size: 30px;
     text-align: left;
-    padding: 3.85rem 1.5rem;
+    padding: 2rem 1.5rem;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
 }
@@ -103,6 +104,10 @@ td h3 {
     color: rgb(14, 14, 58);
 }
 
+#paragraph {
+    background-color: white;
+}
+
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     [class*="col-"] {
@@ -114,6 +119,14 @@ td h3 {
 
     .hero {
         height: 80vh;
+    }
+
+    #howItWorks {
+        height: 40%;
+    }
+
+    #valueProposition p {
+        padding: 1em;
     }
     
 }

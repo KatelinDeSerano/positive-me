@@ -44,7 +44,18 @@ label{
    transition: 0.2s ease-in-out;
 }
 
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+    
+    .journalForm {
+        width: auto;
+        margin: 15px;
 
+    }
+}
 
 
 
