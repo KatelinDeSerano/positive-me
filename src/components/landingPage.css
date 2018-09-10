@@ -20,6 +20,7 @@
     color: white;
     height: 60vh;
     width: 100%;
+    font-family: 'Merriweather', serif;
 }
 
 /* TODO: Fix paragraph to look nice */
@@ -72,7 +73,7 @@
     height: 300px;
     width: 300px;
     font-weight: bold;
-    font-family: 'Shadows Into Light';
+    font-family: 'Merriweather', serif;
 }
 
 .landingPage p {
@@ -102,6 +103,10 @@
 td h3 {
     margin: 40px 15px;
     color: rgb(14, 14, 58);
+}
+
+table {
+    border-spacing: 0px;
 }
 
 #paragraph {

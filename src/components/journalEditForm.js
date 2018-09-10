@@ -6,7 +6,7 @@ import './journalForm.css';
 import Input from './input.js';
 import { editJournalEntry } from '../actions/positive.js';
 import { connect } from 'react-redux';
-import { load as loadAccount} from '../actions/positive.js';
+import { load as loadAccount } from '../actions/positive.js';
 
 class InitializeFromStateForm extends Component {
   onSubmit(values) {

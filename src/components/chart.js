@@ -6,8 +6,6 @@ var BarChart = require('react-chartjs-2').Bar;
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-// consider changing "emojiValue" variables to more descriptive names
-
 export class Chart extends React.Component {
 
     render() {
@@ -66,12 +64,6 @@ export class Chart extends React.Component {
                     stacked: true
                 }]
             },
-
-            // ///Boolean - Whether grid lines are shown across the chart
-            // scaleShowGridLines : false,
-
-            // //String - Colour of the grid lines
-            // scaleGridLineColor : "rgba(0,0,0,.05)",
 
             //Number - Width of the grid lines
             scaleGridLineWidth: 1,

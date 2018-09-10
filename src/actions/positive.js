@@ -1,5 +1,5 @@
-import {API_BASE_URL} from '../config.js';
-import {normalizeResponseErrors} from './utils';
+import { API_BASE_URL } from '../config.js';
+import { normalizeResponseErrors } from './utils';
 
 
 export const SET_EMOJI_VALUE_1 = "SET_EMOJI_VALUE_1";
@@ -28,9 +28,8 @@ export const loadCurrentJournalEntry = (data) => {
 
 export const EDIT_JOURNAL_ENTRY_SUCCESS = "EDIT_JOURNAL_ENTRY_SUCCESS";
 export const editJournalEntrySuccess = (data) => {
-  console.log("Clicked! Route to Edit Page!")
   return {
-    type: EDIT_JOURNAL_ENTRY_SUCCESS, 
+    type: EDIT_JOURNAL_ENTRY_SUCCESS,
     data
   }
 }
@@ -38,7 +37,7 @@ export const editJournalEntrySuccess = (data) => {
 export const EDIT_JOURNAL_ENTRY_ERROR = "EDIT_JOURNAL_ENTRY_ERROR";
 export const editJournalEntryError = (error) => {
   return {
-    type: EDIT_JOURNAL_ENTRY_ERROR, 
+    type: EDIT_JOURNAL_ENTRY_ERROR,
     error
   }
 }
@@ -46,13 +45,13 @@ export const editJournalEntryError = (error) => {
 export const editJournalEntry = (id, journalEntry) => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
   return fetch(`${API_BASE_URL}/positive-me/${id}`, {
-      method: 'PUT',
-      headers: {
-          // Provide our auth token as credentials
-          Authorization: `Bearer ${authToken}`, 
-          "Content-Type": 'application/json'
-      },
-      body: JSON.stringify(journalEntry)
+    method: 'PUT',
+    headers: {
+      // Provide our auth token as credentials
+      Authorization: `Bearer ${authToken}`,
+      "Content-Type": 'application/json'
+    },
+    body: JSON.stringify(journalEntry)
   })
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
@@ -65,7 +64,7 @@ export const editJournalEntry = (id, journalEntry) => (dispatch, getState) => {
 export const POST_JOURNAL_ENTRY_SUCCESS = "POST_JOURNAL_ENTRY_SUCCESS";
 export const postJournalEntrySuccess = (data) => {
   return {
-    type: POST_JOURNAL_ENTRY_SUCCESS, 
+    type: POST_JOURNAL_ENTRY_SUCCESS,
     data
   }
 }
@@ -73,7 +72,7 @@ export const postJournalEntrySuccess = (data) => {
 export const POST_JOURNAL_ENTRY_ERROR = "POST_JOURNAL_ENTRY_ERROR";
 export const postJournalEntryError = (error) => {
   return {
-    type: POST_JOURNAL_ENTRY_ERROR, 
+    type: POST_JOURNAL_ENTRY_ERROR,
     error
   }
 }
@@ -81,18 +80,18 @@ export const postJournalEntryError = (error) => {
 export const postJournalEntry = (journalEntry) => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
   return fetch(`${API_BASE_URL}/positive-me`, {
-      method: 'POST',
-      headers: {
-          // Provide our auth token as credentials
-          Authorization: `Bearer ${authToken}`, 
-          "Content-Type": 'application/json'
-      },
-      body: JSON.stringify(journalEntry)
+    method: 'POST',
+    headers: {
+      // Provide our auth token as credentials
+      Authorization: `Bearer ${authToken}`,
+      "Content-Type": 'application/json'
+    },
+    body: JSON.stringify(journalEntry)
   })
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
     .then(data => dispatch(postJournalEntrySuccess(data)))
-    .catch(err => { 
+    .catch(err => {
       console.log(err);
       dispatch(postJournalEntryError(err))
     })
@@ -105,7 +104,7 @@ export const fetchJournalSuccess = (data) => {
     return entry;
   })
   return {
-    type: FETCH_JOURNAL_SUCCESS, 
+    type: FETCH_JOURNAL_SUCCESS,
     data
   }
 }
@@ -113,7 +112,7 @@ export const fetchJournalSuccess = (data) => {
 export const FETCH_JOURNAL_ERROR = "FETCH_JOURNAL_ERROR";
 export const fetchJournalError = (error) => {
   return {
-    type: FETCH_JOURNAL_ERROR, 
+    type: FETCH_JOURNAL_ERROR,
     error
   }
 }
@@ -121,12 +120,12 @@ export const fetchJournalError = (error) => {
 export const fetchJournal = (user) => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
   return fetch(`${API_BASE_URL}/positive-me/${user}`, {
-      method: 'GET',
-      headers: {
-          // Provide our auth token as credentials
-          Authorization: `Bearer ${authToken}`, 
-          "Content-Type": 'application/json'
-      }
+    method: 'GET',
+    headers: {
+      // Provide our auth token as credentials
+      Authorization: `Bearer ${authToken}`,
+      "Content-Type": 'application/json'
+    }
   })
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
@@ -137,13 +136,13 @@ export const fetchJournal = (user) => (dispatch, getState) => {
 export const deleteEntry = (id, data) => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
   return fetch(`${API_BASE_URL}/positive-me/${id}`, {
-      method: 'DELETE',
-      headers: {
-          // Provide our auth token as credentials
-          Authorization: `Bearer ${authToken}`
-      }
+    method: 'DELETE',
+    headers: {
+      // Provide our auth token as credentials
+      Authorization: `Bearer ${authToken}`
+    }
   })
-  .then(res => dispatch(deleteJournalSuccess(id, data)))
+    .then(res => dispatch(deleteJournalSuccess(id, data)))
 };
 
 export const DELETE_JOURNAL_SUCCESS = "DELETE_JOURNAL_SUCCESS";
@@ -157,7 +156,7 @@ export const deleteJournalSuccess = (id, data) => {
 export const DELETE_JOURNAL_ERROR = "DELETE_JOURNAL_ERROR";
 export const deleteJournalError = (error) => {
   return {
-    type: DELETE_JOURNAL_ERROR, 
+    type: DELETE_JOURNAL_ERROR,
     error
   }
 }
@@ -171,9 +170,9 @@ export const toggleEntrySelected = (data) => {
 }
 
 export const LOAD = "LOAD";
-export const load = data => ({ 
-  type: LOAD, 
-  data 
+export const load = data => ({
+  type: LOAD,
+  data
 });
 
 

@@ -25,7 +25,6 @@ export class LoginForm extends React.Component {
                 onSubmit={this.props.handleSubmit(values =>
                     this.onSubmit(values)
                 )}>
-
                 {error}
                 <label htmlFor="username">Username</label>
                 <Field
@@ -46,9 +45,7 @@ export class LoginForm extends React.Component {
                 <button disabled={this.props.pristine || this.props.submitting}>
                     Log in
                 </button>
-
             </form>
-
         );
     }
 }

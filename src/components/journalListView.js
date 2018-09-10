@@ -13,7 +13,7 @@ import happy from '../images/260102-emoji/svg/happy-2.svg';
 import coolFace from '../images/260102-emoji/svg/cool-1.svg';
 
 export class JournalListView extends React.Component {
-   
+
     deleteEntry(data_id, data) {
         let newArray = data.filter(item => item._id !== data_id);
         this.props.dispatch(deleteEntry(data_id, newArray));
@@ -59,7 +59,7 @@ export class JournalListView extends React.Component {
             } else if (entry.emojiValue2 === 5) {
                 positiveEmoji = coolFace;
             }
-console.log(negativeEmoji)
+            console.log(negativeEmoji)
 
             return (
 
@@ -100,16 +100,14 @@ console.log(negativeEmoji)
                         </ul>
                     </div>
                 </li>
-
             )
         }
         )
-
         return (
-            
-                <ul className="journalListView">
-                    {journalEntries}
-                </ul> 
+
+            <ul className="journalListView">
+                {journalEntries}
+            </ul>
         );
     };
 };
