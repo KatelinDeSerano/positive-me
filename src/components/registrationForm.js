@@ -56,7 +56,7 @@ export class RegistrationForm extends React.Component {
                     >
                         Register
                 </button>
-                    <div ClassName="demo">
+                    <div className="demo">
                         <p> Try our Demo Page!</p>
                         <p>Username: Demo </p>
                         <p>Password: Password123</p>
