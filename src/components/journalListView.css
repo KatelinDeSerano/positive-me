@@ -17,6 +17,7 @@ ul {
     margin: 15px;
     margin-bottom: 0;
     color: #444;
+    display: inline-block;
 }
 
 .journalListView {
@@ -24,9 +25,7 @@ ul {
     margin: 50px auto;
     box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.577); 
   }
-  /* li.listViewMenuis-closed:before {
-    content: '\f055';;
-  } */
+
 li.listViewMenu{
     list-style: none;
     margin-bottom: 2px;

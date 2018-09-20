@@ -1,6 +1,6 @@
 import React from 'react';
 import { Field, reduxForm, focus } from 'redux-form';
-import './registrationForm.css';
+import './loginForm.css';
 import { registerUser } from '../actions/users';
 import { login } from '../actions/auth';
 import Input from './input';
@@ -56,6 +56,11 @@ export class RegistrationForm extends React.Component {
                     >
                         Register
                 </button>
+                    <div ClassName="demo">
+                        <p> Try our Demo Page!</p>
+                        <p>Username: Demo </p>
+                        <p>Password: Password123</p>
+                    </div>
                 </form>
             </div>
         );

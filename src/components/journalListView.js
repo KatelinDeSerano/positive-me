@@ -59,7 +59,6 @@ export class JournalListView extends React.Component {
             } else if (entry.emojiValue2 === 5) {
                 positiveEmoji = coolFace;
             }
-            console.log(negativeEmoji)
 
             return (
 
@@ -69,7 +68,6 @@ export class JournalListView extends React.Component {
                             <i id="icon" className="fas fa-chevron-down"></i>
                         </span>
                         <span onClick={() => this.deleteEntry(entry._id, this.props.journal)}>
-
                             <i className="fas fa-trash-alt" id="icon"></i>
                         </span>
                         <Link to='/journaledit'>
@@ -88,8 +86,6 @@ export class JournalListView extends React.Component {
                             <li className="label">How does that thought make you feel?</li>
                             <img src={negativeEmoji}
                                 className="emoji" alt="emoji" />
-                            {/* <li>Is there substantial evidence for my thought?</li>
-                            <p>{this.state.journal.negativeEvidence}</p> */}
                             <li className="label">Is there evidence contrary to my thought?</li>
                             <p className="entryField" >{entry.evidenceAgainstThought}</p>
                             <li className="label">What would a positive alternative thought be in this instance?</li>
@@ -104,7 +100,6 @@ export class JournalListView extends React.Component {
         }
         )
         return (
-
             <ul className="journalListView">
                 {journalEntries}
             </ul>

@@ -14,7 +14,6 @@ class InitializeFromStateForm extends Component {
     values.negativeFeeling = this.props.emojiValue1;
     values.positiveFeeling = this.props.emojiValue2;
     values.user = this.props.user;
-    console.log(values);
     this.props.dispatch(editJournalEntry(values._id, values));
   }
   render() {

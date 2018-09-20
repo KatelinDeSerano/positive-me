@@ -92,7 +92,6 @@ export const postJournalEntry = (journalEntry) => (dispatch, getState) => {
     .then(res => res.json())
     .then(data => dispatch(postJournalEntrySuccess(data)))
     .catch(err => {
-      console.log(err);
       dispatch(postJournalEntryError(err))
     })
 };

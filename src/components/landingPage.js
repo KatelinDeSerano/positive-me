@@ -31,11 +31,7 @@ class LandingPage extends Component {
             </div>
           </div>
         </div>
-
         <div className="row" id="valueProposition">
-          {/* <div className="col-4">
-              <h2>Sound familiar? <br></br> We can help. </h2>
-            </div> */}
           <div className="col-12"  >
             <p>PositiveMe helps dial down that inner-critic.
                We help you train your inner-voice by helping you to
