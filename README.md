@@ -20,6 +20,8 @@ PositiveMe is a fullstack javascript application that aids users in finding silv
   
 The API and client were deployed separately and stored in separate GitHub repos.
 
+https://github.com/KatelinDeSerano/postive-me-api
+
 Client Side
 
 - HTML
@@ -39,6 +41,10 @@ DevOps
 
 - Heroku
 - TravisCI
+
+
+Screenshots: 
+
 
 
 
