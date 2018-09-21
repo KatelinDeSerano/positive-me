@@ -48,7 +48,7 @@ Format: ![Desktop Image](url)
 Format: ![Login Page](url)
 
 ![Registration Page](/images/register.png)
-Format: ![Registration Page](url)
+Format: ![Registration Page](/images/register.png)
 
 ![User Dashboard](/images/dashboard.png)
 Format: ![User Dashboard](url)
