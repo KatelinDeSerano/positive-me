@@ -1,7 +1,3 @@
-PositiveMe
-
-https://lit-shelf-99422.herokuapp.com/
-
 Summary:
  
 PositiveMe is a fullstack javascript application that aids users in finding silver-linings in their day to day happenings by guided journaling. This app supports basic CRUD operations - users should be able to: 
@@ -59,7 +55,3 @@ Format: ![User Dashboard](url)
 
 ![Journal History](/images/history.png)
 Format: ![Journal History](url)
-
-
-
-
