@@ -41,17 +41,13 @@ DevOps
 
 Screenshots: 
 
-![Desktop](/images/landingPage.png)
-Format: ![Desktop Image](url)
+![Landing Page](/images/landingPage.png?raw=true "Landing Page")
 
-![Login Page](/images/login.png)
-Format: ![Login Page](url)
+![Login Page](/images/login.png?raw=true "Login Page")
 
-![Registration Page](/images/register.png)
-Format: ![Registration Page](/images/register.png)
+![Registration Page](/images/register.png?raw=true "Registration Page")
 
-![User Dashboard](/images/dashboard.png)
-Format: ![User Dashboard](url)
+![User Dashboard](/images/dashboard.png?raw=true "User Dashboard")
 
-![Journal History](/images/history.png)
-Format: ![Journal History](url)
+![Journal History](/images/history.png?raw=true "Journal History")
+
